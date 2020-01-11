@@ -1,7 +1,7 @@
 ; homez.g
 ; called to home the Z axis
 
-M98 P/macros/Coupler - Unlock	;Open Coupler
+M98 P"/macros/Coupler - Unlock"	; Open Coupler
 
 G91 				; Relative mode
 G1 S2 Z5 F5000			; Lower the bed

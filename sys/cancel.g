@@ -2,7 +2,7 @@
 G29 S2
 
 ; purge tool
-;M98 Ppurge.g
+;M98 P"purge.g"
 
 ; park tool
 T-1

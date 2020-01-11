@@ -5,7 +5,7 @@
 M116 P3
 
 ;prime nozzle
-;M98 Pprime.g
+;M98 P"prime.g"
 
 ;mesh levelling on
 G29 S1

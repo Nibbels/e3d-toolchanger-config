@@ -10,4 +10,4 @@ G1 C1 F50000
 G92 C0
 
 ;Open Coupler
-M98 P/macros/Coupler - Unlock
+M98 P"/macros/Coupler - Unlock"
