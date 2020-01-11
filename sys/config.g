@@ -9,7 +9,7 @@ M83 							; ...but relative extruder moves
 M555 P2 						; Set firmware compatibility to look like Marlin
 
 ; Network
-M550 P"ToolChanger" 					; Set machine name
+M550 P"NibbelsToolChanger" 					; Set machine name
 ;M587 S"ssid" P"password"				; WiFi Settings
 ;M552 S1 P"ssid"					; Enable WiFi Networking
 M552 S1							; Enable Networking
@@ -20,25 +20,32 @@ M586 P2 S0 						; Disable Telnet
 M667 S1 						; Select CoreXY mode	
 
 ; Endstops
-M574 X1 Y1 S3 						; Set X / Y endstop stall detection
-M574 Z1 S2 						; Set Z endstop probe
 M558 P7 X0 Y0 Z2 H3 F360 I0 T20000 			; Set Z probe type to switch, the axes for which it is used and the dive height + speeds
 G31 P200 X0 Y0 Z0	 				; Set Z probe trigger value, offset and trigger height
 M557 X10:290 Y20:180 S40 				; Define mesh grid
 
 ; Drive direction
-M569 P0 S0 						; Drive 0 X
-M569 P1 S0 						; Drive 1 Y
-M569 P2 S1 						; Drive 2 Z
-M569 P3 S0 						; Drive 3 E0
-M569 P4 S0 						; Drive 4 E1
-M569 P5 S1 						; Drive 5 E2
-M569 P6 S1 						; Drive 6 E3
-M569 P7 S0 						; Drive 7 COUPLER
-M569 P8 S0 						; Drive 8 UNUSED
-M569 P9 S0 						; Drive 9 UNUSED
 
-M584 X0 Y1 Z2 C7 E3:4:5:6 				; Apply custom drive mapping
+M569 P5 S0 						; Drive 5 X A         //changed by Nibbels
+M569 P6 S0 						; Drive 6 X B         //changed by Nibbels
+M569 P4 S1 						; Drive 4 Z turned    //changed by Nibbels
+
+M569 P7 S0 						; Drive 7 COUPLER
+
+M569 P0 S1 						; Drive 0 E2 turned   //changed by Nibbels
+M569 P1 S1 						; Drive 1 E3 turned   //changed by Nibbels
+M569 P8 S0 						; Drive 8 E1          //changed by Nibbels: Extruder 1 at E5=Stepper8
+M569 P9 S0 						; Drive 9 E0          //changed by Nibbels: Extruder 0 at E6=Stepper9
+
+M569 P2 S0 						; Drive 2 UNUSED      //changed by Nibbels
+M569 P3 S0 						; Drive 3 UNUSED      //changed by Nibbels
+
+M584 X5 Y6 Z4 C7 E9:8:0:1 				; Apply custom drive mapping  //changed by Nibbels: Extruder 0 at E6=Stepper9, Extruder 1 at E5=Stepper8
+
+
+M574 X1 Y1 S3 						; Set X / Y endstop stall detection
+M574 Z1 S2 						; Set Z endstop probe
+
 M208 X-35:328.5 Y-49:243 Z0:300 C0:500 S0 		; Set axis maxima & minima
 M350 E8:8:8:8 C8 I0 					; Configure microstepping without interpolation
 M350 X16 Y16 Z16 I1					; Configure microstepping with interpolation
