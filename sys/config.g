@@ -20,7 +20,8 @@ M586 P2 S0 						; Disable Telnet
 M667 S1 						; Select CoreXY mode	
 
 ; Endstops
-M558 P7 X0 Y0 Z2 H3 F360 I0 T20000 			; Set Z probe type to switch, the axes for which it is used and the dive height + speeds
+; M558 P7 X0 Y0 Z2 H3 F360 I0 T20000 			; Set Z probe type to switch, the axes for which it is used and the dive height + speeds (RFF2)
+M558 P5 C2 X0 Y0 Z2 H3 F360 I0 T20000 			; Set Z probe type to switch, the axes for which it is used and the dive height + speeds (RFF3)
 G31 P200 X0 Y0 Z0	 				; Set Z probe trigger value, offset and trigger height
 M557 X10:290 Y20:180 S40 				; Define mesh grid
 
@@ -42,8 +43,8 @@ M569 P3 S0 						; Drive 3 UNUSED      //changed by Nibbels
 
 M584 X5 Y6 Z4 C7 E9:8:0:1 				; Apply custom drive mapping  //changed by Nibbels: Extruder 0 at E6=Stepper9, Extruder 1 at E5=Stepper8
 
-
-M574 X1 Y1 S3 						; Set X / Y endstop stall detection
+M574 X1 S3 						; Set X endstop stall detection
+M574 Y1 S3 						; Set Y endstop stall detection
 M574 Z1 S2 						; Set Z endstop probe
 
 M208 X-35:328.5 Y-49:243 Z0:300 C0:500 S0 		; Set axis maxima & minima
