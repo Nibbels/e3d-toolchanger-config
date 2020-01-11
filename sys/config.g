@@ -64,20 +64,30 @@ M915 C S5 F0 H200 R4700					; Coupler
 M915 X Y S5 F0 H400 R4700				; X / Y Axes
 
 ; Heaters
-M305 P0 T100000 B4138 C0 				; Set thermistor 
-M143 H0 S225 						; Set temperature limit for heater 0 to 225C
+; M305 P0 T100000 B4138 C0 													; Set bed thermistor (RFF_2)
+M308 S0 P"bed_temp" A"Heated bed temp." Y"thermistor" T100000 B4138 C0 		; Set thermistor as sensor 0 (RFF_3)
+M950 H0 C"bed_heat" T0														; Heater 0 uses the bed_heat pin and sensor 0 (RFF_3)
+M143 H0 S225 																; Set temperature limit for heater 0 to 225C
 
-M305 S"T0" P1 R4700 T100000 B4388 			; Set thermistor
-M143 H1 S300 						; Set temperature limit for heater 1 to 300C
+; M305 S"T0" P1 R4700 T100000 B4388 										; Set tool1 thermistor (RFF_2)
+M308 S1 P"e0_temp" A"Tool1 temp." Y"thermistor" R4700 T100000 B4388			; Set thermistor as sensor 1 (RFF_3)
+M950 H1 C"e0_heat" T1														; Heater 1 uses the e0_heat pin and sensor 1 (RFF_3)
+M143 H1 S300 																; Set temperature limit for heater 1 to 300C
 
-M305 S"T1" P2 R4700 T100000 B4388			; Set thermistor
-M143 H2 S300 						; Set temperature limit for heater 2 to 300C
+; M305 S"T1" P2 R4700 T100000 B4388											; Set tool2 thermistor (RFF_2)
+M308 S2 P"e1_temp" A"Tool2 temp." Y"thermistor" R4700 T100000 B4388			; Set thermistor as sensor 2 (RFF_3)
+M950 H2 C"e1_heat" T2														; Heater 2 uses the e1_heat pin and sensor 2 (RFF_3)
+M143 H2 S300 																; Set temperature limit for heater 2 to 300C
 
-M305 S"T2" P3 R4700 T100000 B4388			;Set thermistor
-M143 H3 S300 						; Set temperature limit for heater 3 to 300C
+; M305 S"T2" P3 R4700 T100000 B4388											; Set tool3 thermistor (RFF_2)
+M308 S3 P"e2_temp" A"Tool3 temp." Y"thermistor" R4700 T100000 B4388			; Set thermistor as sensor 3 (RFF_3)
+M950 H3 C"e2_heat" T3														; Heater 3 uses the e2_heat pin and sensor 3 (RFF_3)
+M143 H3 S300 																; Set temperature limit for heater 3 to 300C
 
-M305 S"T3" P4 R4700 T100000 B4388 			; Set thermistor 
-M143 H4 S300 						; Set temperature limit for heater 4 to 300C
+; M305 S"T3" P4 R4700 T100000 B4388 										; Set tool4 thermistor (RFF_2)
+M308 S4 P"e3_temp" A"Tool4 temp." Y"thermistor" R4700 T100000 B4388			; Set thermistor as sensor 4 (RFF_3)
+M950 H4 C"e3_heat" T4														; Heater 4 uses the e3_heat pin and sensor 4 (RFF_3)
+M143 H4 S300 																; Set temperature limit for heater 4 to 300C
 
 
 ; Tools
