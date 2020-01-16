@@ -114,7 +114,7 @@ M308 S3 P"e2temp" Y"thermistor" A"T2" T100000 B4725 C7.06e-8 ; Set thermistor
 M950 H3 C"duex.e2heat" T3                                    ; Extruder 0 heater
 M143 H3 S300                                                 ; Set temperature limit for heater 3 to 300C
 
-M308 S4 P"e3temp" Y"thermistor" A"T0" T100000 B4725 C7.06e-8 ; Set thermistor
+M308 S4 P"e3temp" Y"thermistor" A"T3" T100000 B4725 C7.06e-8 ; Set thermistor
 M950 H4 C"duex.e3heat" T4                                    ; Extruder 0 heater
 M143 H4 S300                                                 ; Set temperature limit for heater 4 to 300C
 
