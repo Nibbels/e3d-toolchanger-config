@@ -60,9 +60,7 @@ M584 X5 Y6 Z4 C7 E9:8:0:1       ; Apply custom drive mapping  //changed by Nibbe
 M574 X1 S3                                   ; Set X endstop stall detection
 M574 Y1 S3                                   ; Set Y endstop stall detection
 
-M574 Z1 S2                                   ; Set Z endstop probe @used by Nibbels
-M558 P8 C"zstop" H3 F360 I0 T20000           ; Set Z probe type to switch, the axes for which it is used and the dive height + speeds (RFF3) @Nibbels
-;M574 Z0                                     ; No Z endstop @used by DC42
+M574 Z0                                      ; No Z endstop @used by DC42 using G30 homing
 M558 P8 C"zstop" H3 F360 I0 T20000           ; Set Z probe type to switch, the axes for which it is used and the dive height + speeds @DC42
 G31 P200 X0 Y0 Z0                            ; Set Z probe trigger value, offset and trigger height
 M557 X10:290 Y20:180 S40                     ; Set Z probe: Define mesh grid
