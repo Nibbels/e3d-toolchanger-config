@@ -65,7 +65,7 @@ M558 P8 C"zstop" H3 F360 I0 T20000           ; Set Z probe type to switch, the a
 G31 P200 X0 Y0 Z0                            ; Set Z probe trigger value, offset and trigger height
 M557 X10:290 Y20:180 S40                     ; Set Z probe: Define mesh grid
 
-; M574 C1 S3                                   ; Stall detect coupler at low end of its range
+M574 C1 S3                                   ; Stall detect coupler at low end of its range
 
 ; Stepper driver
 M350 E16:16:16:16 I1                                    ; Configure E microstepping with interpolation
@@ -77,11 +77,11 @@ M906 X2000 Y2000 Z1330 C400 E1600:1600:1600:1600 I30    ; Set motor currents (mA
 M84 S120                                                ; Set idle timeout
 
 ; Stall Detection
-; M915 C S6 F0 H200 R4700               ; Coupler
+M915   C S3 F1 H400                     ; Coupler
 M915 X Y S3 F0 H400 R4700               ; X / Y Axes
 
 ; Axis
-M208 X-35:328.5 Y-49:243 Z0:300 C0:500 S0           ; Set axis maxima & minima
+M208 X-35:328.5 Y-49:243 Z0:300 C0:240 S0           ; Set axis maxima & minima
 M566 X400 Y400 Z8 C2 E2:2:2:2                       ; Set maximum instantaneous speed changes (mm/min)
 M203 X35000 Y35000 Z1200 C5000 E5000:5000:5000:5000 ; Set maximum speeds (mm/min)
 M201 X3000 Y3000 Z400 C500 E2500:2500:2500:2500     ; Set accelerations (mm/s^2)
