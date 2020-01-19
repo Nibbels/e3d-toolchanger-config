@@ -84,7 +84,7 @@ M915 X Y S3 F0 H400 R4700               ; X / Y Axes
 M208 X-35:328.5 Y-49:243 Z0:300 C0:500 S0           ; Set axis maxima & minima
 M566 X400 Y400 Z8 C2 E2:2:2:2                       ; Set maximum instantaneous speed changes (mm/min)
 M203 X35000 Y35000 Z1200 C5000 E5000:5000:5000:5000 ; Set maximum speeds (mm/min)
-M201 X6000 Y6000 Z400 C500 E2500:2500:2500:2500     ; Set accelerations (mm/s^2)
+M201 X3000 Y3000 Z400 C500 E2500:2500:2500:2500     ; Set accelerations (mm/s^2)
 
 ; AAR
 M593 F50                                                ; cancel ringing at 50Hz (https://forum.e3d-online.com/threads/accelerometer-and-resonance-measurements-of-the-motion-system.3445/)
