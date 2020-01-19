@@ -12,7 +12,7 @@
 ;  M201 ... C500     ; Set accelerations [mm/s^2] (stock config)
 ;  M915 C S3 F1 H400 ; Coupler Stall Detection
 ;
-;  Comment on M915: I had a problem that sensitivity S3 always stopped and sensitivity S4 always stalled using F0.
+;  Comment on M915: I had a problem that sensitivity S3 always stopped and sensitivity S4 did detect nothing using F0.
 ;                   This worked using F1.
 ;
 ; Macro Coordinates: Lock position is C40, unlock position is C123
