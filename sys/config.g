@@ -93,14 +93,10 @@ M376 H15                                                ; bed compensation taper
 ; Bed and Tools
 ; ############
 
-M308 S0 A"Bed" P"bedtemp" Y"thermistor" T100000 B4138 C0 ; Set thermistor as sensor 0 (RFF_3)
-M950 H0 C"bedheat" T0                                    ; Heater 0 uses the bed_heat pin and sensor 0 (RFF_3)
-M143 H0 S225                                             ; Set temperature limit for heater 0 to 225C
-
 ; Heaters
-M308 S0 P"bedtemp" Y"thermistor" T100000 B4138 C0   ; Set thermistor 
-M950 H0 C"bedheat" T0                               ; Bed heater
-M143 H0 S225                                        ; Set temperature limit for heater 0 to 225C
+M308 S0 P"bedtemp" Y"thermistor" A"Bed" T100000 B4138 C0   ; Set thermistor 
+M950 H0 C"bedheat" T0                                      ; Bed heater
+M143 H0 S225                                               ; Set temperature limit for heater 0 to 225C
 
 M308 S1 P"e0temp" Y"thermistor" A"T0" T100000 B4725 C7.06e-8 ; Set thermistor
 M950 H1 C"e0heat" T1                                         ; Extruder 0 heater
