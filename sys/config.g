@@ -73,7 +73,9 @@ M350 C8 I0                                              ; Configure C microstepp
 M350 X16 Y16 Z16 I1                                     ; Configure XYZ microstepping with interpolation
 
 M92 X100 Y100 Z1600 C100 E834:834:834:834               ; Set steps per mm
-M906 X2000 Y2000 Z1330 C400 E1600:1600:1600:1600 I30    ; Set motor currents (mA) and motor idle factor in percent
+M906 X2000 Y2000 Z1330 C400 E1680:1300:1680:1680 I30    ; Set motor currents (mA) and motor idle factor in percent
+                                                        ; Compact but Powerfull: datasheed 1,68A -> rounded to 1,6A @ E0 E2 E3
+                                                        ; Compact but Powerfull: datasheed 1,4A  -> set to 1,3A     @ E1
 M84 S120                                                ; Set idle timeout
 
 ; Stall Detection
