@@ -19,13 +19,13 @@
 
 M400
 G91                 ; Relative coordinates
-M913 C70            ; Crash fallback: Set motors to lower current, but < 60 was unstable low.
+M913 C70            ; Crash fallback: Set C motor to lower current, but < 60 was unstable low.
 G1 H1 C10 F5000     ; Space min end or stall at max end, needed for acceleration towards near min end.
 G1 H1 C-1000 F5000  ; Try to stall at min end, reset to min-axis M203 = 0 coordinate
 M400
 G92 C0              ; Crash fallback: coordinates reset to 0 in case stall did not reset to min-axis M203 coordinate
 G90                 ; Back to absolute coordinates
-M913 C100           ; MOTORS TO 100% CURRENT
+M913 C100           ; Set C motor 100% current
 
 ;Open Coupler
 M98 P"/macros/Coupler - Unlock"
