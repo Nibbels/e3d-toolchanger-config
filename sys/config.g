@@ -81,7 +81,7 @@ M915   C S3 F1 H400                     ; Coupler
 M915 X Y S3 F0 H400 R4700               ; X / Y Axes
 
 ; Axis
-M208 X-35:328.5 Y-49:243 Z0:300 C0:240 S0           ; Set axis maxima & minima
+M208 X-35:328.5 Y-60:232 Z0:300 C0:240 S0           ; Set axis maxima & minima
 M566 X400 Y400 Z8 C2 E2:2:2:2                       ; Set maximum instantaneous speed changes (mm/min)
 M203 X35000 Y35000 Z1200 C5000 E5000:5000:5000:5000 ; Set maximum speeds (mm/min)
 M201 X3000 Y3000 Z400 C500 E2500:2500:2500:2500     ; Set accelerations (mm/s^2)
@@ -161,8 +161,8 @@ M106 P8 S0                      ; T3 PCF
 ;M572 D2 S0.2                   ; pressure advance T2
 ;M572 D3 S0.2                   ; pressure advance T3
 
-; Tool offsets
-G10 P0 X-9 Y39 Z-5              ; T0
-G10 P1 X-9 Y39 Z-5              ; T1
+; Tool offsets G1 X318.1 Y0
+G10 P0 X14.1‬ Y59.75 Z-7.95        ; T0 TitanAero 3mm
+G10 P1 X13.9 Y59.65 Z-8.25        ; T1 TitanAero 3mm
 G10 P2 X-9 Y39 Z-5              ; T2
 G10 P3 X-9 Y39 Z-5              ; T3

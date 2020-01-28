@@ -8,13 +8,13 @@
 M98 P"/macros/Coupler - Unlock"
 
 ;Move to location
-G1 X75.3 Y200 F50000
+G1 X75.3 Y180 F50000
 
 ;Move in
-G1 X75.3 Y215 F50000
+G1 X75.3 Y200 F5000
 
 ;Collect
-G1 X75.3 Y224.3 F2500
+G1 X75.3 Y213.3 F2500
 
 ;Close Coupler
 M98 P"/macros/Coupler - Lock"
@@ -26,4 +26,4 @@ G1 Z15 F1000
 G90
 
 ;Move Out
-G1 X75.3 Y150 F4000
+G1 X75.3 Y140 F4000

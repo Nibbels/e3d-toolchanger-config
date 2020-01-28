@@ -11,10 +11,10 @@ M98 P"/macros/Coupler - Unlock"
 G1 X304.5 Y200 F50000
 
 ;Move in
-G1 X304.5 Y230 F50000
+G1 X304.5 Y210 F10000
 
 ;Collect
-G1 X304.5 Y242.5 F2500
+G1 X304.5 Y231.5 F2500
 
 ;Close Coupler
 M98 P"/macros/Coupler - Lock"
