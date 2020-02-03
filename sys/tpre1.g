@@ -1,6 +1,6 @@
 ; tpre1.g
 ; called before tool 1 is selected
-; tool state.currentTool -1
+; tool state.currentTool is -1
 
 ;Unlock Coupler
 M98 P"/macros/Coupler - Unlock"

@@ -1,5 +1,6 @@
 ; tfree1.g
 ; called when tool 1 is freed
+; tool state.currentTool is 1
 
 ; Space Z
 G1 Z{move.axes[2].userPosition + 4} F1000
