@@ -1,29 +1,13 @@
 ; tpre2.g
 ; called before tool 2 is selected
 
-;Ensure no tool is selected
-;T-1
-
 ;Unlock Coupler
 M98 P"/macros/Coupler - Unlock"
 
-;Move to location
-G1 X214.5 Y200 F50000
-
-;Move in
-G1 X214.5 Y210 F10000
+;Move to safe location
+G1 X214.5 Y144 F50000
+G1        Y187 F10000
 
 ;Collect
-G1 X214.5 Y231.5 F2500
-
-;Close Coupler
+G1        Y213 F2500
 M98 P"/macros/Coupler - Lock"
-
-;WARNING! WARNING! WARNING! WARNING! WARNING! WARNING! WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
-;if you are using non-standard length hotends ensure the bed is lowered enough BEFORE undocking the tool!
-G91
-G1 Z10 F1000
-G90
-
-;Move Out
-G1 X214.5 Y150 F4000
