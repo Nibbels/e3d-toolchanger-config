@@ -79,8 +79,8 @@ M906 X1600 Y1600 Z1100 C400 E1680:1400:1680:1680 I30    ; Set motor currents (mA
 M84 S120                                                ; Set idle timeout
 
 ; Stall Detection
-M915   C S3 F1 H400                     ; Coupler
-M915 X Y S3 F0 H400 R4700               ; X / Y Axes
+M915   C S3 F1 H400 R0                    ; Coupler
+M915 X Y S3 F0 H400 R0                    ; X / Y Axes
 
 ; Axis
 M208 X-35:328.5 Y-60:232 Z0:280 C0:240 S0           ; Set axis maxima & minima
