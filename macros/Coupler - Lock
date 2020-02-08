@@ -1,5 +1,5 @@
 M400
-M906 C500    ; Raise motor current a bit.
+M906 C600    ; Raise motor current a bit.
 M400
 G1 C40 F2500
 M400
