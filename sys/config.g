@@ -164,7 +164,7 @@ M106 P8 S0                      ; T3 PCF
 ;M572 D3 S0.2                   ; pressure advance T3
 
 ; Tool offsets G1 X318.1 Y0
-G10 P0 X14.1‬ Y59.75 Z-7.95        ; T0 TitanAero 3mm
-G10 P1 X13.9 Y59.65 Z-8.15        ; T1 TitanAero 3mm
+G10 P0 X14.1‬ Y59.75 Z-7.85      ; T0 TitanAero 3mm
+G10 P1 X13.9 Y59.65 Z-8.15      ; T1 TitanAero 3mm
 G10 P2 X-9 Y39 Z-5              ; T2
 G10 P3 X-9 Y39 Z-5              ; T3
