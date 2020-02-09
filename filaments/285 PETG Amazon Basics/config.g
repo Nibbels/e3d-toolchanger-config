@@ -1,4 +1,4 @@
-M221 S100      ; Flow(Diameter Compensation) 
+M221 S94      ; Flow(Diameter Compensation) 
                ; Steps/mm for 285 is default
 G10 R180 S235  ; Set Nozzle Standby and Active Temperature
 
