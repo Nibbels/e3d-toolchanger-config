@@ -11,7 +11,7 @@ G1 Z{move.axes[2].userPosition + 10} F1000
 ;Drop tool to dock
 G53 G1 X304.5 Y144 F50000
 G53 G1        Y187 F10000
-G53 G1        Y213 Z{move.axes[2].userPosition - 10} F2500
+G53 G1        Y213 F2500
 M98 P"/macros/Coupler - Unlock"
 
 ;Move Out
