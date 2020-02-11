@@ -9,7 +9,8 @@ M116 P2
 
 ; move tool off dock, lower Z because of tools extra height
 G91
-G1 Y-70 Z{-1 * tools[state.currentTool].offsets[2] + 10} F7000
+G1 Z{-1 * tools[state.currentTool].offsets[2] + 3} F7000
+G1 Y-70 F10000
 G90
 
 ;prime nozzle
