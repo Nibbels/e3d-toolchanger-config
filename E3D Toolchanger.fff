@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
-<profile name="E3D Toolchanger" version="2020-02-08 23:48:34" app="S3D-Software 4.1.2">
+<profile name="E3D Toolchanger" version="2020-02-11 21:55:42" app="S3D-Software 4.1.2">
   <baseProfile>Default</baseProfile>
   <printMaterial>Default</printMaterial>
   <printQuality>Medium</printQuality>
   <printExtruders>All Extruders</printExtruders>
   <extruder name="Extruder 1">
     <toolheadNumber>0</toolheadNumber>
-    <diameter>0.35</diameter>
-    <autoWidth>0</autoWidth>
-    <width>0.4</width>
+    <diameter>0.3</diameter>
+    <autoWidth>1</autoWidth>
+    <width>0.36</width>
     <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>1</retractionDistance>
@@ -22,9 +22,9 @@
   </extruder>
   <extruder name="Extruder 2">
     <toolheadNumber>1</toolheadNumber>
-    <diameter>0.35</diameter>
-    <autoWidth>0</autoWidth>
-    <width>0.4</width>
+    <diameter>0.3</diameter>
+    <autoWidth>1</autoWidth>
+    <width>0.36</width>
     <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>1</retractionDistance>
@@ -74,7 +74,7 @@
   <bottomSolidLayers>3</bottomSolidLayers>
   <perimeterOutlines>2</perimeterOutlines>
   <printPerimetersInsideOut>1</printPerimetersInsideOut>
-  <startPointOption>2</startPointOption>
+  <startPointOption>1</startPointOption>
   <startPointOriginX>0</startPointOriginX>
   <startPointOriginY>0</startPointOriginY>
   <sequentialIslands>0</sequentialIslands>
@@ -90,27 +90,27 @@
   <raftSeparationDistance>0.14</raftSeparationDistance>
   <raftTopInfill>100</raftTopInfill>
   <aboveRaftSpeedMultiplier>0.3</aboveRaftSpeedMultiplier>
-  <useSkirt>0</useSkirt>
+  <useSkirt>1</useSkirt>
   <skirtExtruder>0</skirtExtruder>
   <skirtLayers>1</skirtLayers>
-  <skirtOutlines>5</skirtOutlines>
-  <skirtOffset>6.4</skirtOffset>
+  <skirtOutlines>2</skirtOutlines>
+  <skirtOffset>2</skirtOffset>
   <usePrimePillar>0</usePrimePillar>
   <primePillarExtruder>999</primePillarExtruder>
   <primePillarWidth>12</primePillarWidth>
   <primePillarLocation>7</primePillarLocation>
   <primePillarSpeedMultiplier>1</primePillarSpeedMultiplier>
   <useOozeShield>0</useOozeShield>
-  <oozeShieldExtruder>999</oozeShieldExtruder>
+  <oozeShieldExtruder>0</oozeShieldExtruder>
   <oozeShieldOffset>2</oozeShieldOffset>
-  <oozeShieldOutlines>1</oozeShieldOutlines>
-  <oozeShieldSidewallShape>1</oozeShieldSidewallShape>
+  <oozeShieldOutlines>3</oozeShieldOutlines>
+  <oozeShieldSidewallShape>0</oozeShieldSidewallShape>
   <oozeShieldSidewallAngle>30</oozeShieldSidewallAngle>
   <oozeShieldSpeedMultiplier>1</oozeShieldSpeedMultiplier>
   <infillExtruder>0</infillExtruder>
   <internalInfillPattern>Rectilinear</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>100</infillPercentage>
+  <infillPercentage>30</infillPercentage>
   <outlineOverlapPercentage>15</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>5</minInfillLength>
@@ -197,11 +197,11 @@
   <outlineUnderspeed>0.5</outlineUnderspeed>
   <solidInfillUnderspeed>0.8</solidInfillUnderspeed>
   <supportUnderspeed>0.8</supportUnderspeed>
-  <rapidXYspeed>4800</rapidXYspeed>
-  <rapidZspeed>1002</rapidZspeed>
+  <rapidXYspeed>12000</rapidXYspeed>
+  <rapidZspeed>1200</rapidZspeed>
   <minBridgingArea>50</minBridgingArea>
   <bridgingExtraInflation>0</bridgingExtraInflation>
-  <bridgingExtrusionMultiplier>1</bridgingExtrusionMultiplier>
+  <bridgingExtrusionMultiplier>0.87</bridgingExtrusionMultiplier>
   <bridgingSpeedMultiplier>1</bridgingSpeedMultiplier>
   <useFixedBridgingAngle>0</useFixedBridgingAngle>
   <fixedBridgingAngle>0</fixedBridgingAngle>
@@ -217,14 +217,14 @@
   <diaphragmLayerInterval>20</diaphragmLayerInterval>
   <robustSlicing>1</robustSlicing>
   <mergeAllIntoSolid>0</mergeAllIntoSolid>
-  <onlyRetractWhenCrossingOutline>1</onlyRetractWhenCrossingOutline>
+  <onlyRetractWhenCrossingOutline>0</onlyRetractWhenCrossingOutline>
   <retractBetweenLayers>1</retractBetweenLayers>
-  <useRetractionMinTravel>0</useRetractionMinTravel>
+  <useRetractionMinTravel>1</useRetractionMinTravel>
   <retractionMinTravel>3</retractionMinTravel>
   <retractWhileWiping>0</retractWhileWiping>
   <onlyWipeOutlines>1</onlyWipeOutlines>
-  <avoidCrossingOutline>0</avoidCrossingOutline>
-  <maxMovementDetourFactor>3</maxMovementDetourFactor>
+  <avoidCrossingOutline>1</avoidCrossingOutline>
+  <maxMovementDetourFactor>10</maxMovementDetourFactor>
   <toolChangeRetractionDistance>1</toolChangeRetractionDistance>
   <toolChangeExtraRestartDistance>0</toolChangeExtraRestartDistance>
   <toolChangeRetractionSpeed>600</toolChangeRetractionSpeed>
@@ -233,8 +233,8 @@
   <thinWallAllowedOverlapPercentage>10</thinWallAllowedOverlapPercentage>
   <singleExtrusionMinLength>1</singleExtrusionMinLength>
   <singleExtrusionMinPrintingWidthPercentage>50</singleExtrusionMinPrintingWidthPercentage>
-  <singleExtrusionMaxPrintingWidthPercentage>200</singleExtrusionMaxPrintingWidthPercentage>
-  <singleExtrusionEndpointExtension>0.2</singleExtrusionEndpointExtension>
+  <singleExtrusionMaxPrintingWidthPercentage>160</singleExtrusionMaxPrintingWidthPercentage>
+  <singleExtrusionEndpointExtension>0</singleExtrusionEndpointExtension>
   <horizontalSizeCompensation>0</horizontalSizeCompensation>
   <autoConfigureQuality name="Fast">
     <layerHeight>0.3</layerHeight>
@@ -249,7 +249,7 @@
     <topSolidLayers>3</topSolidLayers>
     <bottomSolidLayers>3</bottomSolidLayers>
     <skirtLayers>1</skirtLayers>
-    <infillPercentage>100</infillPercentage>
+    <infillPercentage>30</infillPercentage>
     <supportInfillPercentage>30</supportInfillPercentage>
   </autoConfigureQuality>
   <autoConfigureQuality name="High">
@@ -315,14 +315,14 @@
     <infillExtruder>0</infillExtruder>
     <supportExtruder>0</supportExtruder>
     <denseSupportExtruder>1</denseSupportExtruder>
-    <useSkirt>0</useSkirt>
+    <useSkirt>1</useSkirt>
     <usePrimePillar>0</usePrimePillar>
     <useOozeShield>0</useOozeShield>
     <startingGcode>T-1,M106 S[fan_speed_pwm],M140 S[bed0_temperature],M190 S[bed0_temperature]</startingGcode>
   </autoConfigureExtruders>
   <autoConfigureMaterial name="Default">
     <globalExtruderTemperature>190</globalExtruderTemperature>
-    <globalBedTemperature>90</globalBedTemperature>
+    <globalBedTemperature>100</globalBedTemperature>
     <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
     <fanSpeed>
       <setpoint layer="1" speed="0"/>

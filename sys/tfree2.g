@@ -3,7 +3,7 @@
 ; tool state.currentTool is 2
 
 ; Space Z
-G1 Z{move.axes[2].userPosition + 10} F1000
+G1 Z{move.axes[2].userPosition + 5} F1000
 
 ;Purge nozzle
 ;M98 P"purge.g"
