@@ -13,8 +13,5 @@ G1 Z{-1 * tools[state.currentTool].offsets[2] + 3} F7000
 G1 Y-70 F10000
 G90
 
-;prime nozzle
-;M98 P"prime.g"
-
 ;PCF fan on
 M106 P4 S127

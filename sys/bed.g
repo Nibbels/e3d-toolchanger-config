@@ -10,4 +10,4 @@ G29
 G29 S2
 
 ; Park the head
-G1 X150 Y-49 F50000
+G1 X150 Y-49 F15000
