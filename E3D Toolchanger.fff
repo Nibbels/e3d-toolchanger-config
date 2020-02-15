@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="E3D Toolchanger" version="2020-02-12 23:21:55" app="S3D-Software 4.1.2">
+<profile name="E3D Toolchanger" version="2020-02-15 23:54:26" app="S3D-Software 4.1.2">
   <baseProfile>Default</baseProfile>
   <printMaterial>PETG</printMaterial>
   <printQuality>Medium</printQuality>
@@ -13,8 +13,8 @@
     <useRetract>1</useRetract>
     <retractionDistance>1</retractionDistance>
     <extraRestartDistance>0</extraRestartDistance>
-    <retractionZLift>0.4</retractionZLift>
-    <retractionSpeed>1800</retractionSpeed>
+    <retractionZLift>0</retractionZLift>
+    <retractionSpeed>39960</retractionSpeed>
     <useCoasting>0</useCoasting>
     <coastingDistance>0.2</coastingDistance>
     <useWipe>0</useWipe>
@@ -29,8 +29,8 @@
     <useRetract>1</useRetract>
     <retractionDistance>1</retractionDistance>
     <extraRestartDistance>0</extraRestartDistance>
-    <retractionZLift>0.4</retractionZLift>
-    <retractionSpeed>1800</retractionSpeed>
+    <retractionZLift>0</retractionZLift>
+    <retractionSpeed>39960</retractionSpeed>
     <useCoasting>0</useCoasting>
     <coastingDistance>0.2</coastingDistance>
     <useWipe>0</useWipe>
@@ -38,15 +38,15 @@
   </extruder>
   <extruder name="Extruder 3">
     <toolheadNumber>2</toolheadNumber>
-    <diameter>0.4</diameter>
-    <autoWidth>0</autoWidth>
-    <width>0.4</width>
+    <diameter>0.3</diameter>
+    <autoWidth>1</autoWidth>
+    <width>0.36</width>
     <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>1</retractionDistance>
     <extraRestartDistance>0</extraRestartDistance>
     <retractionZLift>0</retractionZLift>
-    <retractionSpeed>1800</retractionSpeed>
+    <retractionSpeed>39960</retractionSpeed>
     <useCoasting>0</useCoasting>
     <coastingDistance>0.2</coastingDistance>
     <useWipe>0</useWipe>
@@ -54,15 +54,15 @@
   </extruder>
   <extruder name="Extruder 4">
     <toolheadNumber>3</toolheadNumber>
-    <diameter>0.4</diameter>
-    <autoWidth>0</autoWidth>
-    <width>0.4</width>
+    <diameter>0.3</diameter>
+    <autoWidth>1</autoWidth>
+    <width>0.36</width>
     <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>1</retractionDistance>
     <extraRestartDistance>0</extraRestartDistance>
     <retractionZLift>0</retractionZLift>
-    <retractionSpeed>1800</retractionSpeed>
+    <retractionSpeed>39960</retractionSpeed>
     <useCoasting>0</useCoasting>
     <coastingDistance>0.2</coastingDistance>
     <useWipe>0</useWipe>
@@ -108,15 +108,15 @@
   <oozeShieldSidewallAngle>30</oozeShieldSidewallAngle>
   <oozeShieldSpeedMultiplier>1</oozeShieldSpeedMultiplier>
   <infillExtruder>0</infillExtruder>
-  <internalInfillPattern>Rectilinear</internalInfillPattern>
+  <internalInfillPattern>Full Honeycomb</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>100</infillPercentage>
-  <outlineOverlapPercentage>15</outlineOverlapPercentage>
-  <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
-  <minInfillLength>5</minInfillLength>
+  <infillPercentage>15</infillPercentage>
+  <outlineOverlapPercentage>25</outlineOverlapPercentage>
+  <infillExtrusionWidthPercentage>120</infillExtrusionWidthPercentage>
+  <minInfillLength>3</minInfillLength>
   <infillLayerInterval>1</infillLayerInterval>
-  <internalInfillAngles>45,-45</internalInfillAngles>
-  <overlapInternalInfillAngles>0</overlapInternalInfillAngles>
+  <internalInfillAngles>0,120,-120</internalInfillAngles>
+  <overlapInternalInfillAngles>1</overlapInternalInfillAngles>
   <externalInfillAngles>45,-45</externalInfillAngles>
   <generateSupport>0</generateSupport>
   <supportExtruder>0</supportExtruder>
@@ -138,7 +138,7 @@
     <temperatureNumber>0</temperatureNumber>
     <isHeatedBed>1</isHeatedBed>
     <stabilizeAtStartup>0</stabilizeAtStartup>
-    <setpoint layer="1" temperature="85"/>
+    <setpoint layer="1" temperature="100"/>
   </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0"/>
@@ -192,8 +192,8 @@
   <exportFileFormat>gcode</exportFileFormat>
   <celebration>0</celebration>
   <celebrationSong>Funky Town</celebrationSong>
-  <postProcessing></postProcessing>
-  <defaultSpeed>3300</defaultSpeed>
+  <postProcessing>{REPLACE &quot;G1 E-1.0000 F39960&quot; &quot;G10&quot;},{REPLACE &quot;G1 E0.0000 F39960&quot; &quot;G11&quot;}</postProcessing>
+  <defaultSpeed>2700</defaultSpeed>
   <outlineUnderspeed>0.6</outlineUnderspeed>
   <solidInfillUnderspeed>0.8</solidInfillUnderspeed>
   <supportUnderspeed>0.8</supportUnderspeed>
@@ -224,17 +224,17 @@
   <retractWhileWiping>0</retractWhileWiping>
   <onlyWipeOutlines>1</onlyWipeOutlines>
   <avoidCrossingOutline>1</avoidCrossingOutline>
-  <maxMovementDetourFactor>10</maxMovementDetourFactor>
-  <toolChangeRetractionDistance>1</toolChangeRetractionDistance>
+  <maxMovementDetourFactor>3</maxMovementDetourFactor>
+  <toolChangeRetractionDistance>1.2</toolChangeRetractionDistance>
   <toolChangeExtraRestartDistance>0</toolChangeExtraRestartDistance>
   <toolChangeRetractionSpeed>600</toolChangeRetractionSpeed>
   <externalThinWallType>1</externalThinWallType>
   <internalThinWallType>1</internalThinWallType>
   <thinWallAllowedOverlapPercentage>10</thinWallAllowedOverlapPercentage>
   <singleExtrusionMinLength>1</singleExtrusionMinLength>
-  <singleExtrusionMinPrintingWidthPercentage>50</singleExtrusionMinPrintingWidthPercentage>
+  <singleExtrusionMinPrintingWidthPercentage>40</singleExtrusionMinPrintingWidthPercentage>
   <singleExtrusionMaxPrintingWidthPercentage>160</singleExtrusionMaxPrintingWidthPercentage>
-  <singleExtrusionEndpointExtension>0</singleExtrusionEndpointExtension>
+  <singleExtrusionEndpointExtension>0.2</singleExtrusionEndpointExtension>
   <horizontalSizeCompensation>0</horizontalSizeCompensation>
   <autoConfigureQuality name="Fast">
     <layerHeight>0.3</layerHeight>
@@ -249,7 +249,7 @@
     <topSolidLayers>4</topSolidLayers>
     <bottomSolidLayers>4</bottomSolidLayers>
     <skirtLayers>1</skirtLayers>
-    <infillPercentage>100</infillPercentage>
+    <infillPercentage>15</infillPercentage>
     <supportInfillPercentage>30</supportInfillPercentage>
   </autoConfigureQuality>
   <autoConfigureQuality name="High">
@@ -320,18 +320,9 @@
     <useOozeShield>0</useOozeShield>
     <startingGcode>T-1,M106 S[fan_speed_pwm],M140 S[bed0_temperature],M190 S[bed0_temperature]</startingGcode>
   </autoConfigureExtruders>
-  <autoConfigureMaterial name="Default">
-    <globalExtruderTemperature>190</globalExtruderTemperature>
-    <globalBedTemperature>85</globalBedTemperature>
-    <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
-    <fanSpeed>
-      <setpoint layer="1" speed="0"/>
-      <setpoint layer="2" speed="100"/>
-    </fanSpeed>
-  </autoConfigureMaterial>
   <autoConfigureMaterial name="PETG">
     <globalExtruderTemperature>190</globalExtruderTemperature>
-    <globalBedTemperature>85</globalBedTemperature>
+    <globalBedTemperature>100</globalBedTemperature>
     <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
     <fanSpeed>
       <setpoint layer="1" speed="0"/>
