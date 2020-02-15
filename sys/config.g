@@ -73,7 +73,7 @@ M350 C8 I0                                              ; Configure C microstepp
 M350 X16 Y16 Z16 I1                                     ; Configure XYZ microstepping with interpolation
 
 M92 X100 Y100 Z1600 C100 E834:834:834:834               ; Set steps per mm
-M906 X1600 Y1600 Z1100 C400 E1500:1500:1500:1500 I30    ; Set motor currents (mA) and motor idle factor in percent
+M906 X1600 Y1600 Z1100 C400 E1300:1300:1300:1300 I30    ; Set motor currents (mA) and motor idle factor in percent
                                                         ; Compact but Powerfull: datasheed 1,68 A -> rounded to 1,6A @ E0 E1 E2 E3
                                                         ; Slimline:              datasheed 1,4  A
 M84 S120                                                ; Set idle timeout
@@ -164,7 +164,7 @@ M106 P8 S0                      ; T3 PCF
 ;M572 D3 S0.2                   ; pressure advance T3
 
 ; Tool offsets G1 X318.1 Y0
-G10 P0 X14.1‬ Y59.75 Z-7.68      ; T0 TitanAero 3mm
+G10 P0 X14.1‬ Y59.75 Z-7.73      ; T0 TitanAero 3mm
 G10 P1 X13.9 Y59.65 Z-8.06      ; T1 TitanAero 3mm
 G10 P2 X-9 Y39 Z-5              ; T2
 G10 P3 X-9 Y39 Z-5              ; T3
