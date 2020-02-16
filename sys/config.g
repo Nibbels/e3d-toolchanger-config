@@ -84,9 +84,9 @@ M915 X Y S3 F0 H400 R0                    ; X / Y Axes
 
 ; Axis
 M208 X-35:328.5 Y-60:232 Z0:280 C0:240 S0           ; Set axis maxima & minima
-M566 X400 Y400 Z8 C2 E2:2:2:2                       ; Set maximum instantaneous speed changes (mm/min)
+M566 X400 Y400 Z50 C2 E2:2:2:2                      ; Set maximum instantaneous speed changes (mm/min)
 M203 X35000 Y35000 Z1200 C5000 E5000:5000:5000:5000 ; Set maximum speeds (mm/min)
-M201 X3000 Y3000 Z400 C500 E2500:2500:2500:2500     ; Set accelerations (mm/s^2)
+M201 X3000 Y3000 Z500 C500 E2500:2500:2500:2500     ; Set accelerations (mm/s^2)
 
 ; AAR
 M593 F50                                                ; cancel ringing at 50Hz (https://forum.e3d-online.com/threads/accelerometer-and-resonance-measurements-of-the-motion-system.3445/)
@@ -164,7 +164,7 @@ M106 P8 S0                      ; T3 PCF
 ;M572 D3 S0.2                   ; pressure advance T3
 
 ; Tool offsets G1 X318.1 Y0
-G10 P0 X14.1‬ Y59.75 Z-7.73      ; T0 TitanAero 3mm
-G10 P1 X13.9 Y59.65 Z-8.06      ; T1 TitanAero 3mm
+G10 P0 X14.1‬ Y59.75 Z-7.60      ; T0 TitanAero 3mm
+G10 P1 X13.9 Y59.65 Z-8.00      ; T1 TitanAero 3mm
 G10 P2 X-9 Y39 Z-5              ; T2
 G10 P3 X-9 Y39 Z-5              ; T3
