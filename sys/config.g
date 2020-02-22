@@ -61,7 +61,7 @@ M574 X1 S3                                   ; Set X endstop stall detection
 M574 Y1 S3                                   ; Set Y endstop stall detection
 
 M574 Z0                                      ; No Z endstop @used by DC42 using G30 homing
-M558 P8 C"zstop" H3 F360 I0 T20000           ; Set Z probe type to switch, the axes for which it is used and the dive height + speeds @DC42
+M558 P8 C"zstop" H3 F360 T20000              ; Set Z probe type to switch, the axes for which it is used and the dive height + speeds @DC42
 G31 P200 X0 Y0 Z0                            ; Set Z probe trigger value, offset and trigger height
 M557 X4:292 Y4:185 S16:30                    ; Set Z probe: Define mesh grid
 
@@ -73,7 +73,7 @@ M350 C8 I0                                              ; Configure C microstepp
 M350 X16 Y16 Z16 I1                                     ; Configure XYZ microstepping with interpolation
 
 M92 X100 Y100 Z1600 C100 E834:834:834:834               ; Set steps per mm
-M906 X1600 Y1600 Z1100 C400 E1300:1300:1300:1300 I30    ; Set motor currents (mA) and motor idle factor in percent
+M906 X1600 Y1600 Z1100 C400 E800:800:800:800 I30        ; Set motor currents (mA) and motor idle factor in percent
                                                         ; Compact but Powerfull: datasheed 1,68 A -> rounded to 1,6A @ E0 E1 E2 E3
                                                         ; Slimline:              datasheed 1,4  A
 M84 S120                                                ; Set idle timeout
@@ -84,21 +84,21 @@ M915 X Y S3 F0 H400 R0                    ; X / Y Axes
 
 ; Axis
 M208 X-35:328.5 Y-60:232 Z0:280 C0:240 S0           ; Set axis maxima & minima
-M566 X400 Y400 Z50 C2 E2:2:2:2                      ; Set maximum instantaneous speed changes (mm/min)
+M566 X400 Y400 Z40 C2 E2:2:2:2                      ; Set maximum instantaneous speed changes (mm/min)
 M203 X35000 Y35000 Z1200 C5000 E5000:5000:5000:5000 ; Set maximum speeds (mm/min)
 M201 X3000 Y3000 Z500 C500 E2500:2500:2500:2500     ; Set accelerations (mm/s^2)
 
 ; AAR
-M593 F50                                                ; cancel ringing at 50Hz (https://forum.e3d-online.com/threads/accelerometer-and-resonance-measurements-of-the-motion-system.3445/)
-M376 H0                                                 ; bed compensation taper, Ausschleichhöhe
+M593 F50                                            ; cancel ringing at 50Hz (https://forum.e3d-online.com/threads/accelerometer-and-resonance-measurements-of-the-motion-system.3445/)
+M376 H0                                             ; bed compensation taper, Ausschleichhöhe
 
 ; Bed and Tools
 ; ############
 
 ; Heaters
-M308 S0 P"bedtemp" Y"thermistor" A"Bed" T100000 B4138 C0   ; Set thermistor 
-M950 H0 C"bedheat" T0                                      ; Bed heater
-M143 H0 S225                                               ; Set temperature limit for heater 0 to 225C
+M308 S0 P"bedtemp" Y"thermistor" A"Bed" T100000 B4138 C0     ; Set thermistor 
+M950 H0 C"bedheat" T0                                        ; Bed heater
+M143 H0 S225                                                 ; Set temperature limit for heater 0 to 225C
 
 M308 S1 P"e0temp" Y"thermistor" A"T0" T100000 B4725 C7.06e-8 ; Set thermistor
 M950 H1 C"e0heat" T1                                         ; Extruder 0 heater
