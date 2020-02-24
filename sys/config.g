@@ -86,19 +86,19 @@ M915 X Y S3 F0 H400 R0                    ; X / Y Axes
 M208 X-35:328.5 Y-60:232 Z0:280 C0:240 S0           ; Set axis maxima & minima
 M566 X400 Y400 Z40 C2 E2:2:2:2                      ; Set maximum instantaneous speed changes (mm/min)
 M203 X35000 Y35000 Z1200 C5000 E5000:5000:5000:5000 ; Set maximum speeds (mm/min)
-M201 X3000 Y3000 Z500 C500 E2500:2500:2500:2500     ; Set accelerations (mm/s^2)
+M201 X2500 Y2000 Z500 C500 E2500:2500:2500:2500     ; Set accelerations (mm/s^2)
 
 ; AAR
-M593 F50                                            ; cancel ringing at 50Hz (https://forum.e3d-online.com/threads/accelerometer-and-resonance-measurements-of-the-motion-system.3445/)
-M376 H0                                             ; bed compensation taper, Ausschleichhöhe
+M593 F50                                                ; cancel ringing at 50Hz (https://forum.e3d-online.com/threads/accelerometer-and-resonance-measurements-of-the-motion-system.3445/)
+M376 H0                                                 ; bed compensation taper, Ausschleichhöhe
 
 ; Bed and Tools
 ; ############
 
 ; Heaters
-M308 S0 P"bedtemp" Y"thermistor" A"Bed" T100000 B4138 C0     ; Set thermistor 
-M950 H0 C"bedheat" T0                                        ; Bed heater
-M143 H0 S225                                                 ; Set temperature limit for heater 0 to 225C
+M308 S0 P"bedtemp" Y"thermistor" A"Bed" T100000 B4138 C0   ; Set thermistor 
+M950 H0 C"bedheat" T0                                      ; Bed heater
+M143 H0 S225                                               ; Set temperature limit for heater 0 to 225C
 
 M308 S1 P"e0temp" Y"thermistor" A"T0" T100000 B4725 C7.06e-8 ; Set thermistor
 M950 H1 C"e0heat" T1                                         ; Extruder 0 heater
@@ -118,11 +118,11 @@ M143 H4 S300                                                 ; Set temperature l
 
 
 ; Tools
-M563 P0 S"T0" D0 H1 F2                  ; Define tool 0
+M563 P0 S"T0 0.25" D0 H1 F2                  ; Define tool 0
 G10 P0 X0 Y0 Z0                         ; Reset tool 0 axis offsets
 G10 P0 R0 S0                            ; Reset initial tool 0 active and standby temperatures to 0C
 
-M563 P1 S"T1" D1 H2 F4                  ; Define tool 1
+M563 P1 S"T1 0.4" D1 H2 F4                  ; Define tool 1
 G10 P1 X0 Y0 Z0                         ; Reset tool 1 axis offsets
 G10 P1 R0 S0                            ; Reset initial tool 1 active and standby temperatures to 0C
 
@@ -165,6 +165,6 @@ M106 P8 S0                      ; T3 PCF
 
 ; Tool offsets G1 X318.1 Y0
 G10 P0 X14.1‬ Y59.75 Z-7.60      ; T0 TitanAero 3mm
-G10 P1 X13.9 Y59.65 Z-8.00      ; T1 TitanAero 3mm
+G10 P1 X13.9 Y59.65 Z-7.95      ; T1 TitanAero 3mm
 G10 P2 X-9 Y39 Z-5              ; T2
 G10 P3 X-9 Y39 Z-5              ; T3

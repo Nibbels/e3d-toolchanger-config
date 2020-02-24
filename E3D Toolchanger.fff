@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
-<profile name="E3D Toolchanger" version="2020-02-15 23:54:26" app="S3D-Software 4.1.2">
+<profile name="E3D Toolchanger" version="2020-02-24 21:47:32" app="S3D-Software 4.1.2">
   <baseProfile>Default</baseProfile>
   <printMaterial>PETG</printMaterial>
   <printQuality>Medium</printQuality>
   <printExtruders>All Extruders</printExtruders>
   <extruder name="Extruder 1">
     <toolheadNumber>0</toolheadNumber>
-    <diameter>0.3</diameter>
+    <diameter>0.28</diameter>
     <autoWidth>1</autoWidth>
-    <width>0.36</width>
+    <width>0.34</width>
     <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>1</retractionDistance>
@@ -22,9 +22,9 @@
   </extruder>
   <extruder name="Extruder 2">
     <toolheadNumber>1</toolheadNumber>
-    <diameter>0.3</diameter>
+    <diameter>0.4</diameter>
     <autoWidth>1</autoWidth>
-    <width>0.36</width>
+    <width>0.48</width>
     <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>1</retractionDistance>
@@ -71,7 +71,7 @@
   <primaryExtruder>0</primaryExtruder>
   <layerHeight>0.2</layerHeight>
   <topSolidLayers>4</topSolidLayers>
-  <bottomSolidLayers>4</bottomSolidLayers>
+  <bottomSolidLayers>3</bottomSolidLayers>
   <perimeterOutlines>3</perimeterOutlines>
   <printPerimetersInsideOut>1</printPerimetersInsideOut>
   <startPointOption>1</startPointOption>
@@ -90,10 +90,10 @@
   <raftSeparationDistance>0.14</raftSeparationDistance>
   <raftTopInfill>100</raftTopInfill>
   <aboveRaftSpeedMultiplier>0.3</aboveRaftSpeedMultiplier>
-  <useSkirt>1</useSkirt>
-  <skirtExtruder>0</skirtExtruder>
+  <useSkirt>0</useSkirt>
+  <skirtExtruder>999</skirtExtruder>
   <skirtLayers>1</skirtLayers>
-  <skirtOutlines>2</skirtOutlines>
+  <skirtOutlines>1</skirtOutlines>
   <skirtOffset>2</skirtOffset>
   <usePrimePillar>0</usePrimePillar>
   <primePillarExtruder>999</primePillarExtruder>
@@ -110,8 +110,8 @@
   <infillExtruder>0</infillExtruder>
   <internalInfillPattern>Full Honeycomb</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>15</infillPercentage>
-  <outlineOverlapPercentage>25</outlineOverlapPercentage>
+  <infillPercentage>27</infillPercentage>
+  <outlineOverlapPercentage>20</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>120</infillExtrusionWidthPercentage>
   <minInfillLength>3</minInfillLength>
   <infillLayerInterval>1</infillLayerInterval>
@@ -207,7 +207,7 @@
   <fixedBridgingAngle>0</fixedBridgingAngle>
   <applyBridgingToPerimeters>0</applyBridgingToPerimeters>
   <filamentDiameters>2.85|2.85|2.85|2.85|2.85|2.85</filamentDiameters>
-  <filamentPricesPerKg>46|46|46|46|46|46</filamentPricesPerKg>
+  <filamentPricesPerKg>30|30|30|30|30|30</filamentPricesPerKg>
   <filamentDensities>1.25|1.25|1.25|1.25|1.25|1.25</filamentDensities>
   <useMinPrintHeight>0</useMinPrintHeight>
   <minPrintHeight>0</minPrintHeight>
@@ -222,12 +222,12 @@
   <useRetractionMinTravel>1</useRetractionMinTravel>
   <retractionMinTravel>3</retractionMinTravel>
   <retractWhileWiping>0</retractWhileWiping>
-  <onlyWipeOutlines>1</onlyWipeOutlines>
+  <onlyWipeOutlines>0</onlyWipeOutlines>
   <avoidCrossingOutline>1</avoidCrossingOutline>
   <maxMovementDetourFactor>3</maxMovementDetourFactor>
-  <toolChangeRetractionDistance>1.2</toolChangeRetractionDistance>
+  <toolChangeRetractionDistance>1</toolChangeRetractionDistance>
   <toolChangeExtraRestartDistance>0</toolChangeExtraRestartDistance>
-  <toolChangeRetractionSpeed>600</toolChangeRetractionSpeed>
+  <toolChangeRetractionSpeed>39960</toolChangeRetractionSpeed>
   <externalThinWallType>1</externalThinWallType>
   <internalThinWallType>1</internalThinWallType>
   <thinWallAllowedOverlapPercentage>10</thinWallAllowedOverlapPercentage>
@@ -247,9 +247,9 @@
   <autoConfigureQuality name="Medium">
     <layerHeight>0.2</layerHeight>
     <topSolidLayers>4</topSolidLayers>
-    <bottomSolidLayers>4</bottomSolidLayers>
+    <bottomSolidLayers>3</bottomSolidLayers>
     <skirtLayers>1</skirtLayers>
-    <infillPercentage>15</infillPercentage>
+    <infillPercentage>27</infillPercentage>
     <supportInfillPercentage>30</supportInfillPercentage>
   </autoConfigureQuality>
   <autoConfigureQuality name="High">
@@ -311,11 +311,11 @@
   <autoConfigureExtruders name="All Extruders" allowedToolheads="4">
     <primaryExtruder>0</primaryExtruder>
     <raftExtruder>0</raftExtruder>
-    <skirtExtruder>0</skirtExtruder>
+    <skirtExtruder>999</skirtExtruder>
     <infillExtruder>0</infillExtruder>
     <supportExtruder>0</supportExtruder>
     <denseSupportExtruder>1</denseSupportExtruder>
-    <useSkirt>1</useSkirt>
+    <useSkirt>0</useSkirt>
     <usePrimePillar>0</usePrimePillar>
     <useOozeShield>0</useOozeShield>
     <startingGcode>T-1,M106 S[fan_speed_pwm],M140 S[bed0_temperature],M190 S[bed0_temperature]</startingGcode>

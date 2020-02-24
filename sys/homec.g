@@ -19,7 +19,7 @@
 
 M400
 G91                 ; Relative coordinates
-M913 C80            ; Crash fallback: Set C motor to lower current, but < 60 was unstable low.
+; M913 C80            ; Crash fallback: Set C motor to lower current, but <= 80 was unstable low.
 G1 H1 C10 F5000     ; Space min end or stall at max end, needed for acceleration towards near min end.
 G1 H1 C-1000 F5000  ; Try to stall at min end, reset to min-axis M203 = 0 coordinate
 M400
