@@ -2,14 +2,14 @@
 ; executed by the firmware on start-up
 
 ; WARNING: Steppers are connected at other locations:
-; - Z    at E1 Driver
-; - X(B) at E2 Driver
-; - X(A) at E3 Driver
-; - C    at E4 Driver
-; - E1   at E5 Driver
-; - E0   at E6 Driver
-; - E2   at X Driver tools still unconnected untested.
-; - E3   at Y Driver tools still unconnected untested.
+; - Z    at E4 Driver
+; - X(A) at E5 Driver
+; - X(B) at E6 Driver
+; - C    at E3 Driver
+; - E0   at E9 Driver
+; - E1   at E8 Driver
+; - E2   at E7 Driver
+; - E3   at E1 Driver / still unconnected untested.
 
 ; General preferences
 ; ############
@@ -44,17 +44,17 @@ M569 P5 S0                      ; Drive 5 X A         //changed by Nibbels
 M569 P6 S0                      ; Drive 6 X B         //changed by Nibbels
 M569 P4 S1                      ; Drive 4 Z turned    //changed by Nibbels
 
-M569 P7 S0                      ; Drive 7 COUPLER
+M569 P3 S0                      ; Drive 3 COUPLER
 
-M569 P0 S1                      ; Drive 0 E2 turned   //changed by Nibbels
-M569 P1 S1                      ; Drive 1 E3 turned   //changed by Nibbels
+M569 P1 S0                      ; Drive 1 E3 UNUSED   //changed by Nibbels
+M569 P7 S1                      ; Drive 7 E2 turned   //changed by Nibbels
 M569 P8 S0                      ; Drive 8 E1          //changed by Nibbels: Extruder 1 at E5=Stepper8
 M569 P9 S0                      ; Drive 9 E0          //changed by Nibbels: Extruder 0 at E6=Stepper9
 
 M569 P2 S0                      ; Drive 2 UNUSED      //changed by Nibbels
-M569 P3 S0                      ; Drive 3 UNUSED      //changed by Nibbels
+M569 P0 S0                      ; Drive 0 UNUSED      //changed by Nibbels
 
-M584 X5 Y6 Z4 C7 E9:8:0:1       ; Apply custom drive mapping  //changed by Nibbels: Extruder 0 at E6=Stepper9, Extruder 1 at E5=Stepper8
+M584 X5 Y6 Z4 C3 E9:8:7:1       ; Apply custom drive mapping  //changed by Nibbels: Extruder 0 at E6=Stepper9, Extruder 1 at E5=Stepper8
 
 ; Endstops
 M574 X1 S3                                   ; Set X endstop stall detection
@@ -118,15 +118,15 @@ M143 H4 S300                                                 ; Set temperature l
 
 
 ; Tools
-M563 P0 S"T0 0.25" D0 H1 F2                  ; Define tool 0
+M563 P0 S"T0 0.25 285" D0 H1 F2                  ; Define tool 0
 G10 P0 X0 Y0 Z0                         ; Reset tool 0 axis offsets
 G10 P0 R0 S0                            ; Reset initial tool 0 active and standby temperatures to 0C
 
-M563 P1 S"T1 0.4" D1 H2 F4                  ; Define tool 1
+M563 P1 S"T1 0.4 285" D1 H2 F4                  ; Define tool 1
 G10 P1 X0 Y0 Z0                         ; Reset tool 1 axis offsets
 G10 P1 R0 S0                            ; Reset initial tool 1 active and standby temperatures to 0C
 
-M563 P2 S"T2" D2 H3 F6                  ; Define tool 2
+M563 P2 S"T2 0.4 175" D2 H3 F6                  ; Define tool 2
 G10 P2 X0 Y0 Z0                         ; Reset tool 2 axis offsets
 G10 P2 R0 S0                            ; Reset initial tool 2 active and standby temperatures to 0C
 
@@ -165,6 +165,6 @@ M106 P8 S0                      ; T3 PCF
 
 ; Tool offsets G1 X318.1 Y0
 G10 P0 X14.1‬ Y59.75 Z-7.60      ; T0 TitanAero 3mm
-G10 P1 X13.9 Y59.65 Z-7.95      ; T1 TitanAero 3mm
+G10 P1 X13.9 Y59.65 Z-7.77      ; T1 TitanAero 3mm
 G10 P2 X-9 Y39 Z-5              ; T2
 G10 P3 X-9 Y39 Z-5              ; T3

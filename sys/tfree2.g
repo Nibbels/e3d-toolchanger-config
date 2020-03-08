@@ -9,11 +9,11 @@ G1 Z{move.axes[2].userPosition + 5} F1000
 ;M98 P"purge.g"
 
 ;Safety distance with tool attached
-G53 G1 X214.5 Y144 F15000
+G53 G1 X212.2 Y144 F15000
 
 ;Drop tool to dock
 G53 G1        Y200 F10000
-G53 G1        Y213 Z{move.axes[2].userPosition - 5} F2500
+G53 G1        Y217.1 Z{move.axes[2].userPosition - 5} F2500
 M98 P"/macros/Coupler - Unlock"
 
 ;Move Out
