@@ -118,15 +118,15 @@ M143 H4 S300                                                 ; Set temperature l
 
 
 ; Tools
-M563 P0 S"T0 0.25 285" D0 H1 F2                  ; Define tool 0
+M563 P0 S"T0 0.25 285" D0 H1 F2         ; Define tool 0
 G10 P0 X0 Y0 Z0                         ; Reset tool 0 axis offsets
 G10 P0 R0 S0                            ; Reset initial tool 0 active and standby temperatures to 0C
 
-M563 P1 S"T1 0.4 285" D1 H2 F4                  ; Define tool 1
+M563 P1 S"T1 0.4 285" D1 H2 F4          ; Define tool 1
 G10 P1 X0 Y0 Z0                         ; Reset tool 1 axis offsets
 G10 P1 R0 S0                            ; Reset initial tool 1 active and standby temperatures to 0C
 
-M563 P2 S"T2 0.4 175" D2 H3 F6                  ; Define tool 2
+M563 P2 S"T2 0.4 175" D2 H3 F6          ; Define tool 2
 G10 P2 X0 Y0 Z0                         ; Reset tool 2 axis offsets
 G10 P2 R0 S0                            ; Reset initial tool 2 active and standby temperatures to 0C
 
@@ -166,5 +166,5 @@ M106 P8 S0                      ; T3 PCF
 ; Tool offsets G1 X318.1 Y0
 G10 P0 X14.1‬ Y59.75 Z-7.60      ; T0 TitanAero 3mm
 G10 P1 X13.9 Y59.65 Z-7.77      ; T1 TitanAero 3mm
-G10 P2 X-9 Y39 Z-5              ; T2
-G10 P3 X-9 Y39 Z-5              ; T3
+G10 P2 X21   Y44    Z-5.7       ; T2 Hemera 1.75mm -> This offset is copied from the internet and not tuned in.
+G10 P3 X-9 Y39 Z-5              ; T3 Bowden default offset *NOT INSTALLED*
