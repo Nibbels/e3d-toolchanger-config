@@ -164,7 +164,7 @@ M106 P8 S0                      ; T3 PCF
 ;M572 D3 S0.2                   ; pressure advance T3
 
 ; Tool offsets G1 X318.1 Y0
-G10 P0 X14.1‬ Y59.75 Z-7.60      ; T0 TitanAero 3mm
-G10 P1 X13.9 Y59.65 Z-7.77      ; T1 TitanAero 3mm
-G10 P2 X21   Y44    Z-5.7       ; T2 Hemera 1.75mm -> This offset is copied from the internet and not tuned in.
-G10 P3 X-9 Y39 Z-5              ; T3 Bowden default offset *NOT INSTALLED*
+G10 P0 X14.1‬0 Y59.75 Z-7.60      ; T0 TitanAero 3mm
+G10 P1 X13.64 Y59.52 Z-7.75      ; T1 TitanAero 3mm
+G10 P2 X19.20 Y44.36 Z-5.28      ; T2 Hemera 1.75mm -> This offset is copied from the internet and not tuned in.
+G10 P3 X-9 Y39 Z-5               ; T3 Bowden default offset *NOT INSTALLED*
