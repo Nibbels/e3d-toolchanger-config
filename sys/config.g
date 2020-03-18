@@ -72,7 +72,7 @@ M350 E16:16:16:16 I1                                    ; Configure E microstepp
 M350 C8 I0                                              ; Configure C microstepping with interpolation
 M350 X16 Y16 Z16 I1                                     ; Configure XYZ microstepping with interpolation
 
-M92 X100 Y100 Z1600 C100 E834:834:834:834               ; Set steps per mm
+M92 X100 Y100 Z1600 C100 E834:834:409:834               ; Set steps per mm
 M906 X1600 Y1600 Z1100 C400 E800:800:800:800 I30        ; Set motor currents (mA) and motor idle factor in percent
                                                         ; Compact but Powerfull: datasheed 1,68 A -> rounded to 1,6A @ E0 E1 E2 E3
                                                         ; Slimline:              datasheed 1,4  A
@@ -84,7 +84,7 @@ M915 X Y S3 F0 H400 R0                    ; X / Y Axes
 
 ; Axis
 M208 X-35:328.5 Y-60:232 Z0:280 C0:240 S0           ; Set axis maxima & minima
-M566 X400 Y400 Z40 C2 E2:2:2:2                      ; Set maximum instantaneous speed changes (mm/min)
+M566 X400 Y400 Z20 C2 E2:2:2:2                      ; Set maximum instantaneous speed changes (mm/min)
 M203 X35000 Y35000 Z1200 C5000 E5000:5000:5000:5000 ; Set maximum speeds (mm/min)
 M201 X2500 Y2000 Z500 C500 E2500:2500:2500:2500     ; Set accelerations (mm/s^2)
 
@@ -164,7 +164,7 @@ M106 P8 S0                      ; T3 PCF
 ;M572 D3 S0.2                   ; pressure advance T3
 
 ; Tool offsets G1 X318.1 Y0
-G10 P0 X14.1‬0 Y59.75 Z-7.60      ; T0 TitanAero 3mm
-G10 P1 X13.64 Y59.52 Z-7.75      ; T1 TitanAero 3mm
-G10 P2 X19.20 Y44.36 Z-5.28      ; T2 Hemera 1.75mm -> This offset is copied from the internet and not tuned in.
+G10 P0 X14.1‬0 Y59.75 Z-7.66      ; T0 TitanAero 3mm
+G10 P1 X13.64 Y59.52 Z-7.87      ; T1 TitanAero 3mm
+G10 P2 X19.20 Y44.36 Z-5.38      ; T2 Hemera 1.75mm -> This offset is copied from the internet and not tuned in.
 G10 P3 X-9 Y39 Z-5               ; T3 Bowden default offset *NOT INSTALLED*
