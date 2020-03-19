@@ -9,5 +9,5 @@ M98 P"/macros/Coupler - Unlock"
 G1 X304.5 Y200 F15000
 
 ;Collect
-G1        Y213 F2500
+G1 Y213 F2500
 M98 P"/macros/Coupler - Lock"

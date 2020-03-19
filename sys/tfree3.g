@@ -3,7 +3,9 @@
 ; tool state.currentTool is 3
 
 ; Space Z
-G1 Z{move.axes[2].userPosition + 5} F1000
+G91
+G1 Z5 F1000
+G90
 
 ;Purge nozzle
 ;M98 P"purge.g"
@@ -13,7 +15,7 @@ G53 G1 X304.5 Y144 F15000
 
 ;Drop tool to dock
 G53 G1        Y200 F10000
-G53 G1        Y213 Z{move.axes[2].userPosition - 5} F2500
+G53 G1        Y213 F2500
 M98 P"/macros/Coupler - Unlock"
 
 ;Move Out
