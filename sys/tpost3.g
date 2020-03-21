@@ -13,5 +13,5 @@ G1 Z10 F7000
 G1 Y-70 F10000
 G90
 
-;PCF fan on
-M106 P8 S127
+; restore print cooling fan speed
+M106 R1
