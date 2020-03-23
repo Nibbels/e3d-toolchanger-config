@@ -15,3 +15,5 @@ G90
 
 ; restore print cooling fan speed
 M106 R1
+
+G1 R2 Z0
