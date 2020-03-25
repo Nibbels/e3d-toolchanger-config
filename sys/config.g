@@ -61,8 +61,8 @@ M574 X1 S3                                   ; Set X endstop stall detection
 M574 Y1 S3                                   ; Set Y endstop stall detection
 
 M574 Z0                                      ; No Z endstop @used by DC42 using G30 homing
-M558 P8 C"zstop" H3 F360 T20000              ; Set Z probe type to switch, the axes for which it is used and the dive height + speeds @DC42
-G31 P200 X0 Y0 Z0                            ; Set Z probe trigger value, offset and trigger height
+M558 P8 C"zstop" H5 F120 T10000              ; Set Z probe type to switch, the axes for which it is used and the dive height + speeds @DC42
+G31 Z0                                       ; Set Z probe trigger value, offset and trigger height
 M557 X4:292 Y4:185 S16:30                    ; Set Z probe: Define mesh grid
 
 M574 C1 S3                                   ; Stall detect coupler at low end of its range
@@ -90,7 +90,7 @@ M201 X2500 Y2000 Z500 C500 E2500:2500:2500:2500     ; Set accelerations (mm/s^2)
 
 ; AAR
 M593 F50                                                ; cancel ringing at 50Hz (https://forum.e3d-online.com/threads/accelerometer-and-resonance-measurements-of-the-motion-system.3445/)
-M376 H0                                                 ; bed compensation taper, Ausschleichhöhe
+M376 H30                                                ; bed compensation taper, Ausschleichhöhe
 
 ; Bed and Tools
 ; ############

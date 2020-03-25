@@ -1,3 +1,4 @@
+M561 ; This cancels any bed-plane fitting
 G28 ; home all axes
 ;G29 ; scan surface
 
