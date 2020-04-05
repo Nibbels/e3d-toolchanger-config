@@ -6,6 +6,7 @@
 G91
 G1 Z5 F1000
 G90
+M561 ; This cancels any bed-plane fitting
 
 ;Purge nozzle
 ;M98 P"purge.g"
