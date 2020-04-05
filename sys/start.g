@@ -1,4 +1,19 @@
+M290 R0 Z0
 M561 ; This cancels any bed-plane fitting
+
+
+; select the extruders with no homing to preheat all at once.
+M18
+T0
+M703
+T1
+M703
+T2
+M703
+
+T-1
+
+
 G28 ; home all axes
 ;G29 ; scan surface
 
@@ -14,4 +29,4 @@ M98 P"prime.g"
 
 T-1
 
-G29 S1 ; Use the Z offset Mesh Map on the SD card
+M290 R1 Z0.0

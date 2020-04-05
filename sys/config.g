@@ -61,9 +61,9 @@ M574 X1 S3                                   ; Set X endstop stall detection
 M574 Y1 S3                                   ; Set Y endstop stall detection
 
 M574 Z0                                      ; No Z endstop @used by DC42 using G30 homing
-M558 P8 C"zstop" H5 F120 T10000              ; Set Z probe type to switch, the axes for which it is used and the dive height + speeds @DC42
+M558 P8 C"zstop" H5 F120 T10000 A5 S0.01     ; Set Z probe type to switch, the axes for which it is used and the dive height + speeds @DC42
 G31 Z0                                       ; Set Z probe trigger value, offset and trigger height
-M557 X4:292 Y4:185 S16:30                    ; Set Z probe: Define mesh grid
+M557 X4:292 Y4:185 S16:15                    ; Set Z probe: Define mesh grid
 
 M574 C1 S3                                   ; Stall detect coupler at low end of its range
 
@@ -118,7 +118,7 @@ M143 H4 S300                                                 ; Set temperature l
 
 
 ; Tools
-M563 P0 S"T0 0.25 285" D0 H1 F2         ; Define tool 0
+M563 P0 S"T0 0.3 285" D0 H1 F2         ; Define tool 0
 G10 P0 X0 Y0 Z0                         ; Reset tool 0 axis offsets
 G10 P0 R0 S0                            ; Reset initial tool 0 active and standby temperatures to 0C
 
