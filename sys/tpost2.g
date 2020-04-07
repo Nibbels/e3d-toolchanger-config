@@ -9,7 +9,6 @@ M116 P2
 
 ; move tool off dock, lower Z because of tools extra height
 G91
-G1 Z10 F7000
 G1 Y-63 F10000
 G90
 

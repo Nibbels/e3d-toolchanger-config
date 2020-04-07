@@ -4,7 +4,7 @@
 
 ; Space Z
 G91
-G1 Z5 F1000
+G1 H2 Z5 F1000
 G90
 M561 ; This cancels any bed-plane fitting
 

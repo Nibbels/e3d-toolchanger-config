@@ -73,7 +73,7 @@ M350 C8 I0                                              ; Configure C microstepp
 M350 X16 Y16 Z16 I1                                     ; Configure XYZ microstepping with interpolation
 
 M92 X100 Y100 Z1600 C100 E834:834:409:834               ; Set steps per mm
-M906 X1600 Y1600 Z1100 C400 E800:800:800:800 I30        ; Set motor currents (mA) and motor idle factor in percent
+M906 X1600 Y1600 Z1100 C400 E900:900:900:900 I30        ; Set motor currents (mA) and motor idle factor in percent
                                                         ; Compact but Powerfull: datasheed 1,68 A -> rounded to 1,6A @ E0 E1 E2 E3
                                                         ; Slimline:              datasheed 1,4  A
 M84 S120                                                ; Set idle timeout
