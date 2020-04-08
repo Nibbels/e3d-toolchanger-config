@@ -15,5 +15,5 @@ G90
 ; restore print cooling fan speed
 M106 R1
 
-G29 S1 ; Use the Z offset Mesh Map on the SD card
-G1 R2 Z0
+;G29 S1 ; Use the Z offset Mesh Map on the SD card
+;G1 R2 Z0

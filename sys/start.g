@@ -1,5 +1,5 @@
 M290 R0 Z0
-M561 ; This cancels any bed-plane fitting
+;M561 ; This cancels any bed-plane fitting
 
 
 ; select the extruders with no homing to preheat all at once.
