@@ -30,3 +30,5 @@ M98 P"prime.g"
 T-1
 
 M290 R1 Z0.0
+
+G29 S1 ; Use the Z offset Mesh Map on the SD card
