@@ -9,9 +9,6 @@ G90                 ; back to absolute positioning
 
 G1 X150 Y100 F15000 ; Position the endstop above the bed centre
 
-
-M558 F1000
-G30
 M558 F300
 G30
 

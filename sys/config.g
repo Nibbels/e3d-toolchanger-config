@@ -60,7 +60,7 @@ M584 X5 Y6 Z4 C3 E9:8:7:1       ; Apply custom drive mapping  //changed by Nibbe
 M574 X1 S3                                   ; Set X endstop stall detection
 M574 Y1 S3                                   ; Set Y endstop stall detection
 
-M574 Z0                                      ; No Z endstop @used by DC42 using G30 homing
+M574 Z0 P"nil"                               ; No Z endstop @used by DC42 using G30 homing
 M558 P8 C"zstop" H5 F120 T10000 A5 S0.01     ; Set Z probe type to switch, the axes for which it is used and the dive height + speeds @DC42
 G31 Z0                                       ; Set Z probe trigger value, offset and trigger height
 M557 X4:292 Y4:185 S16:15                    ; Set Z probe: Define mesh grid
@@ -84,9 +84,9 @@ M915 X Y S3 F0 H400 R0                    ; X / Y Axes
 
 ; Axis
 M208 X-35:328.5 Y-60:232 Z0:280 C0:240 S0           ; Set axis maxima & minima
-M566 X400 Y400 Z20 C2 E2:2:2:2                      ; Set maximum instantaneous speed changes (mm/min)
+M566 X300 Y300 Z20 C2 E2:2:2:2                      ; Set maximum instantaneous speed changes (mm/min)
 M203 X35000 Y35000 Z1200 C5000 E5000:5000:5000:5000 ; Set maximum speeds (mm/min)
-M201 X2500 Y2000 Z500 C500 E2500:2500:2500:2500     ; Set accelerations (mm/s^2)
+M201 X2200 Y2000 Z500 C500 E2500:2500:2500:2500     ; Set accelerations (mm/s^2)
 
 ; AAR
 M593 F50                                                ; cancel ringing at 50Hz (https://forum.e3d-online.com/threads/accelerometer-and-resonance-measurements-of-the-motion-system.3445/)
@@ -98,7 +98,8 @@ M376 H30                                                ; bed compensation taper
 ; Heaters
 M308 S0 P"bedtemp" Y"thermistor" A"Bed" T100000 B4138 C0   ; Set thermistor 
 M950 H0 C"bedheat" T0                                      ; Bed heater
-M143 H0 S225                                               ; Set temperature limit for heater 0 to 225C
+M140 H0                                                    ; Add heater to bed after RRF3.01 RC10
+M143 H0 S120                                               ; Set temperature limit for heater 0 to 225C
 
 M308 S1 P"e0temp" Y"thermistor" A"T0" T100000 B4725 C7.06e-8 ; Set thermistor
 M950 H1 C"e0heat" T1                                         ; Extruder 0 heater
@@ -164,7 +165,7 @@ M106 P8 S0                      ; T3 PCF
 ;M572 D3 S0.2                   ; pressure advance T3
 
 ; Tool offsets G1 X318.1 Y0
-G10 P0 X14.1‬0 Y59.75 Z-7.66      ; T0 TitanAero 3mm
-G10 P1 X13.64 Y59.52 Z-7.87      ; T1 TitanAero 3mm
-G10 P2 X19.20 Y44.36 Z-5.38      ; T2 Hemera 1.75mm -> This offset is copied from the internet and not tuned in.
-G10 P3 X-9 Y39 Z-5               ; T3 Bowden default offset *NOT INSTALLED*
+G10 P0 X14.1‬0 Y59.75 Z-7.67     ; T0 TitanAero 3mm
+G10 P1 X13.64 Y59.52 Z-7.88     ; T1 TitanAero 3mm
+G10 P2 X19.20 Y44.36 Z-5.43     ; T2 Hemera 1.75mm -> This offset is copied from the internet and not tuned in.
+G10 P3 X-9    Y39    Z-7.88     ; T3 Bowden default offset *NOT INSTALLED*
