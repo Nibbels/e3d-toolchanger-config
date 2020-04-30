@@ -7,7 +7,7 @@ G91                 ; Relative mode
 G1 H2 Z5 F5000      ; Lower the bed
 G90                 ; back to absolute positioning
 
-G1 X150 Y100 F15000 ; Position the endstop above the bed centre
+G1 X292 Y184 F15000 ; Position the endstop above the bed centre
 
 M558 F300
 G30
