@@ -1,5 +1,5 @@
-RepRapFirmware filament assignment file v1 generated at 2020-04-15 17:33
+RepRapFirmware filament assignment file v1 generated at 2020-05-10 22:54
 extruder,filament
-2,175 PETG Amazon Basics
-1,285 PETG Extrudr
-0,285 PETG Extrudr 
+2,T2 175 Hemera
+1,T1 285 TitanAero
+0,T0 285 TitanAero

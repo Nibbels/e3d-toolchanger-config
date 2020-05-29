@@ -84,9 +84,9 @@ M915 X Y S3 F0 H400 R0                    ; X / Y Axes
 
 ; Axis
 M208 X-35:328.5 Y-60:232 Z0:280 C0:240 S0           ; Set axis maxima & minima
-M566 X300 Y300 Z20 C2 E2:2:2:2                      ; Set maximum instantaneous speed changes (mm/min)
-M203 X35000 Y35000 Z1200 C5000 E5000:5000:5000:5000 ; Set maximum speeds (mm/min)
-M201 X2200 Y2000 Z500 C500 E2500:2500:2500:2500     ; Set accelerations (mm/s^2)
+M566 X300 Y300 Z20 C2 E100:100:150:100              ; Set maximum instantaneous speed changes (mm/min)
+M203 X15000 Y15000 Z1200 C5000 E5000:5000:5000:5000 ; Set maximum speeds (mm/min)
+M201 X2500 Y2000 Z500 C500 E2500:2500:2500:2500     ; Set accelerations (mm/s^2)
 
 ; AAR
 M593 F50                                                ; cancel ringing at 50Hz (https://forum.e3d-online.com/threads/accelerometer-and-resonance-measurements-of-the-motion-system.3445/)
@@ -161,11 +161,11 @@ M106 P8 S0                      ; T3 PCF
 ; Linear Advance
 ;M572 D0 S0.2                   ; pressure advance T0
 ;M572 D1 S0.2                   ; pressure advance T1
-;M572 D2 S0.2                   ; pressure advance T2
+M572 D2 S0.04                   ; pressure advance T2 Hemera
 ;M572 D3 S0.2                   ; pressure advance T3
 
 ; Tool offsets G1 X318.1 Y0
-G10 P0 X14.1‬0 Y59.75 Z-7.67     ; T0 TitanAero 3mm
-G10 P1 X13.64 Y59.52 Z-7.88     ; T1 TitanAero 3mm
-G10 P2 X19.20 Y44.36 Z-5.43     ; T2 Hemera 1.75mm -> This offset is copied from the internet and not tuned in.
+G10 P0 X14.1‬0 Y59.75 Z-7.60     ; T0 TitanAero 3mm
+G10 P1 X13.64 Y59.52 Z-7.81     ; T1 TitanAero 3mm
+G10 P2 X19.20 Y44.36 Z-5.33     ; T2 Hemera 1.75mm -> This offset is copied from the internet and not tuned in.
 G10 P3 X-9    Y39    Z-7.88     ; T3 Bowden default offset *NOT INSTALLED*

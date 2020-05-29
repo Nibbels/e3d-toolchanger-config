@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<profile name="E3D Toolchanger" version="2020-02-24 21:47:32" app="S3D-Software 4.1.2">
+<profile name="E3D Toolchanger" version="2020-05-01 11:24:46" app="S3D-Software 4.1.2">
   <baseProfile>Default</baseProfile>
   <printMaterial>PETG</printMaterial>
   <printQuality>Medium</printQuality>
-  <printExtruders>All Extruders</printExtruders>
+  <printExtruders>Extruder 3 Only</printExtruders>
   <extruder name="Extruder 1">
     <toolheadNumber>0</toolheadNumber>
     <diameter>0.28</diameter>
@@ -38,9 +38,9 @@
   </extruder>
   <extruder name="Extruder 3">
     <toolheadNumber>2</toolheadNumber>
-    <diameter>0.3</diameter>
+    <diameter>0.4</diameter>
     <autoWidth>1</autoWidth>
-    <width>0.36</width>
+    <width>0.48</width>
     <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>1</retractionDistance>
@@ -68,9 +68,9 @@
     <useWipe>0</useWipe>
     <wipeDistance>5</wipeDistance>
   </extruder>
-  <primaryExtruder>0</primaryExtruder>
+  <primaryExtruder>2</primaryExtruder>
   <layerHeight>0.2</layerHeight>
-  <topSolidLayers>4</topSolidLayers>
+  <topSolidLayers>0</topSolidLayers>
   <bottomSolidLayers>3</bottomSolidLayers>
   <perimeterOutlines>3</perimeterOutlines>
   <printPerimetersInsideOut>1</printPerimetersInsideOut>
@@ -83,15 +83,15 @@
   <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
   <firstLayerUnderspeed>0.66</firstLayerUnderspeed>
   <useRaft>0</useRaft>
-  <raftExtruder>0</raftExtruder>
+  <raftExtruder>2</raftExtruder>
   <raftTopLayers>3</raftTopLayers>
   <raftBaseLayers>2</raftBaseLayers>
   <raftOffset>3</raftOffset>
   <raftSeparationDistance>0.14</raftSeparationDistance>
   <raftTopInfill>100</raftTopInfill>
   <aboveRaftSpeedMultiplier>0.3</aboveRaftSpeedMultiplier>
-  <useSkirt>0</useSkirt>
-  <skirtExtruder>999</skirtExtruder>
+  <useSkirt>1</useSkirt>
+  <skirtExtruder>2</skirtExtruder>
   <skirtLayers>1</skirtLayers>
   <skirtOutlines>1</skirtOutlines>
   <skirtOffset>2</skirtOffset>
@@ -107,23 +107,23 @@
   <oozeShieldSidewallShape>0</oozeShieldSidewallShape>
   <oozeShieldSidewallAngle>30</oozeShieldSidewallAngle>
   <oozeShieldSpeedMultiplier>1</oozeShieldSpeedMultiplier>
-  <infillExtruder>0</infillExtruder>
+  <infillExtruder>2</infillExtruder>
   <internalInfillPattern>Full Honeycomb</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>27</infillPercentage>
+  <infillPercentage>46</infillPercentage>
   <outlineOverlapPercentage>20</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>120</infillExtrusionWidthPercentage>
   <minInfillLength>3</minInfillLength>
   <infillLayerInterval>1</infillLayerInterval>
-  <internalInfillAngles>0,120,-120</internalInfillAngles>
-  <overlapInternalInfillAngles>1</overlapInternalInfillAngles>
+  <internalInfillAngles>5</internalInfillAngles>
+  <overlapInternalInfillAngles>0</overlapInternalInfillAngles>
   <externalInfillAngles>45,-45</externalInfillAngles>
   <generateSupport>0</generateSupport>
-  <supportExtruder>0</supportExtruder>
+  <supportExtruder>2</supportExtruder>
   <supportInfillPercentage>30</supportInfillPercentage>
   <supportExtraInflation>0</supportExtraInflation>
   <supportBaseLayers>0</supportBaseLayers>
-  <denseSupportExtruder>1</denseSupportExtruder>
+  <denseSupportExtruder>2</denseSupportExtruder>
   <denseSupportLayers>0</denseSupportLayers>
   <denseSupportInfillPercentage>70</denseSupportInfillPercentage>
   <supportLayerInterval>1</supportLayerInterval>
@@ -193,7 +193,7 @@
   <celebration>0</celebration>
   <celebrationSong>Funky Town</celebrationSong>
   <postProcessing>{REPLACE &quot;G1 E-1.0000 F39960&quot; &quot;G10&quot;},{REPLACE &quot;G1 E0.0000 F39960&quot; &quot;G11&quot;}</postProcessing>
-  <defaultSpeed>2700</defaultSpeed>
+  <defaultSpeed>3000</defaultSpeed>
   <outlineUnderspeed>0.6</outlineUnderspeed>
   <solidInfillUnderspeed>0.8</solidInfillUnderspeed>
   <supportUnderspeed>0.8</supportUnderspeed>
@@ -206,8 +206,8 @@
   <useFixedBridgingAngle>0</useFixedBridgingAngle>
   <fixedBridgingAngle>0</fixedBridgingAngle>
   <applyBridgingToPerimeters>0</applyBridgingToPerimeters>
-  <filamentDiameters>2.85|2.85|2.85|2.85|2.85|2.85</filamentDiameters>
-  <filamentPricesPerKg>30|30|30|30|30|30</filamentPricesPerKg>
+  <filamentDiameters>2.85|2.85|1.75|2.85|2.85|2.85</filamentDiameters>
+  <filamentPricesPerKg>20|20|20|46|46|46</filamentPricesPerKg>
   <filamentDensities>1.25|1.25|1.25|1.25|1.25|1.25</filamentDensities>
   <useMinPrintHeight>0</useMinPrintHeight>
   <minPrintHeight>0</minPrintHeight>
@@ -246,10 +246,10 @@
   </autoConfigureQuality>
   <autoConfigureQuality name="Medium">
     <layerHeight>0.2</layerHeight>
-    <topSolidLayers>4</topSolidLayers>
+    <topSolidLayers>0</topSolidLayers>
     <bottomSolidLayers>3</bottomSolidLayers>
     <skirtLayers>1</skirtLayers>
-    <infillPercentage>27</infillPercentage>
+    <infillPercentage>46</infillPercentage>
     <supportInfillPercentage>30</supportInfillPercentage>
   </autoConfigureQuality>
   <autoConfigureQuality name="High">
@@ -309,10 +309,10 @@
     <startingGcode>T-1,M106 S[fan_speed_pwm],M140 S[bed0_temperature],M190 S[bed0_temperature]</startingGcode>
   </autoConfigureExtruders>
   <autoConfigureExtruders name="All Extruders" allowedToolheads="4">
-    <primaryExtruder>0</primaryExtruder>
+    <primaryExtruder>1</primaryExtruder>
     <raftExtruder>0</raftExtruder>
     <skirtExtruder>999</skirtExtruder>
-    <infillExtruder>0</infillExtruder>
+    <infillExtruder>1</infillExtruder>
     <supportExtruder>0</supportExtruder>
     <denseSupportExtruder>1</denseSupportExtruder>
     <useSkirt>0</useSkirt>
