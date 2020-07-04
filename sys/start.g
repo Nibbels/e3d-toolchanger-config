@@ -27,6 +27,6 @@ M98 P"prime.g"
 
 T-1
 
-M290 R1 Z0.0
+M290 R1 Z0.000
 
 G29 S1 P"heightmap.csv" ; Use the Z offset Mesh Map on the SD card

@@ -90,7 +90,7 @@ M201 X2500 Y2000 Z500 C500 E2500:2500:2500:2500     ; Set accelerations (mm/s^2)
 
 ; AAR
 M593 F50                                                ; cancel ringing at 50Hz (https://forum.e3d-online.com/threads/accelerometer-and-resonance-measurements-of-the-motion-system.3445/)
-M376 H30                                                ; bed compensation taper, Ausschleichhöhe
+M376 H0                                                 ; bed compensation taper, Ausschleichhöhe
 
 ; Bed and Tools
 ; ############
