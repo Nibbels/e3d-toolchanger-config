@@ -14,7 +14,8 @@ if move.axes[0].homed && move.axes[1].homed && move.axes[2].homed
   G90
 
   ; restore print cooling fan speed
-  M106 R1
+  ; Rnnn Restore fan speed to the value it has when the print was paused (R1) or the last time the fan speed was set and no P parameter was provided (R2).
+  M106 R2
 
   ;G29 S1 ; Use the Z offset Mesh Map on the SD card
   G1 R2 Z10 F30000;
