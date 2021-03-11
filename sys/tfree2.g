@@ -13,11 +13,11 @@ if move.axes[0].homed && move.axes[1].homed && move.axes[2].homed
   ;M98 P"purge.g"
 
   ;Safety distance with tool attached
-  G53 G1 X212.2 Y144 F15000
+  G53 G1 X212.8 Y144 F15000
 
   ;Drop tool to dock
   G53 G1        Y200   F10000
-  G53 G1        Y217.1 F2500
+  G53 G1        Y216.8 F2500
   M98 P"/macros/Coupler - Unlock"
 
   ;Move Out

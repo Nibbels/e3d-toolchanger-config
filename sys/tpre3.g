@@ -7,10 +7,10 @@ if move.axes[0].homed && move.axes[1].homed && move.axes[2].homed
   M98 P"/macros/Coupler - Unlock"
 
   ;Move to safe location
-  G1 X304.5 Y200 F30000
+  G1 X304.4 Y200 F30000
 
   ;Collect
-  G1 Y213 F2500
+  G1 Y216.9 F2500
   M98 P"/macros/Coupler - Lock"
 
   G91

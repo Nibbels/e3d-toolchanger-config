@@ -11,11 +11,12 @@ Duet Web Control 3.1.1
 Copy onto the Micro SD Card and insert into the Duet2 before power on.
 
 You may need to check the config.g file to make changes for use on your own Network.
+I always use the Tool Changer post-processing script to print.
+https://github.com/mkudzia84/toolchanger-pspp
 
 ###### Warning ######
 I did change the stepper ports on which the steppers are connected. -> See config.g in the upper part.
 
-- At 2020-07-12 I do have only 3 Toolheads configured T0:TitanAero@3mm, T1:TitanAero@3mm, T2:Hemera, T3:None
 - The Speeds and Accelerations have been lowered for DirectDrives but they still have to be tuned in.
 - I did change the tool selection / preheat / purge because I park my tools on razorblades.
 - Implementing partfans is still a Todo. The PCF configuration should be fine but it has never been tested.
