@@ -23,9 +23,9 @@ M555 P2                         ; Set firmware compatibility to look like Marlin
 ; Network
 ; ############
 
+M550 P"ToolChanger"             ; Set machine name
 ;M587 S"ssid" P"password"       ; WiFi Settings
 ;M552 S1 P"ssid"                ; Enable WiFi Networking
-M550 P"ToolChanger"             ; Set machine name
 M552 S1                         ; Enable Networking
 M586 P0 S1                      ; Enable HTTP
 M586 P1 S0                      ; Disable FTP
@@ -123,22 +123,21 @@ M143 H4 S300                                                 ; Set temperature l
 M307 H4 A776.8 C166.9 D2.6 S1.00 V24.3 B0
 
 ; Tools
-;M568: Set Tool Settings Available in RepRapFirmware 3.3beta2 and later. The R and S parameters are alternatives to the temperature-setting functions of G10, which may be deprecated in the future.
 M563 P0 S"T0 0.3 285" D0 H1 F2          ; Define tool 0
 G10 P0 X0 Y0 Z0                         ; Reset tool 0 axis offsets
-G10 P0 R0 S0                            ; Reset initial tool 0 active and standby temperatures to 0C
+M568 P0 R0 S0                            ; Reset initial tool 0 active and standby temperatures to 0C
 
 M563 P1 S"T1 0.4 285" D1 H2 F4          ; Define tool 1
 G10 P1 X0 Y0 Z0                         ; Reset tool 1 axis offsets
-G10 P1 R0 S0                            ; Reset initial tool 1 active and standby temperatures to 0C
+M568 P1 R0 S0                            ; Reset initial tool 1 active and standby temperatures to 0C
 
 M563 P2 S"T2 0.4 175" D2 H3 F6          ; Define tool 2
 G10 P2 X0 Y0 Z0                         ; Reset tool 2 axis offsets
-G10 P2 R0 S0                            ; Reset initial tool 2 active and standby temperatures to 0C
+M568 P2 R0 S0                            ; Reset initial tool 2 active and standby temperatures to 0C
 
 M563 P3 S"T3 0.2 175" D3 H4 F8          ; Define tool 3
 G10 P3 X0 Y0 Z0                         ; Reset tool 3 axis offsets
-G10 P3 R0 S0                            ; Reset initial tool 3 active and standby temperatures to 0C
+M568 P3 R0 S0                            ; Reset initial tool 3 active and standby temperatures to 0C
 
 ; Fans
 ; Fan0 output is not used

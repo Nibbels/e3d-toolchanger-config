@@ -2,10 +2,10 @@ M290 R0 Z0
 ;M561 ; This cancels any bed-plane fitting
 
 ; Set Nozzle Standby and Active Temperature for initial purge
-G10 P0 R205 S205
-G10 P1 R215 S215
-G10 P2 R205 S205
-G10 P3 R220 S220
+M568 P0 R205 S205
+M568 P1 R215 S215
+M568 P2 R205 S205
+M568 P3 R220 S220
 
 ; select the extruders with no homing to preheat all at once.
 M18

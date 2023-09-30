@@ -6,3 +6,4 @@ M220 S100              ; Set speed factor override percentage
 
 ; https://docs.duet3d.com/User_manual/Reference/Gcodes#m572-set-or-report-extruder-pressure-advance
 ; https://docs.duet3d.com/User_manual/Reference/Gcodes#m592-configure-nonlinear-extrusion
+; https://docs.duet3d.com/User_manual/Reference/Gcodes#m203-set-maximum-feedrate
