@@ -25,3 +25,9 @@ if move.axes[0].homed && move.axes[1].homed && move.axes[2].homed
 
   ;fan off
   M106 P6 S0
+
+  ; UnSpace Z
+  G91
+  G1 H2 Z-5 F1000
+  G90
+  

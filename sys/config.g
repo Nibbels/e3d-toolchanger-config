@@ -23,9 +23,9 @@ M555 P2                         ; Set firmware compatibility to look like Marlin
 ; Network
 ; ############
 
-M550 P"NibbelsToolChanger"      ; Set machine name
 ;M587 S"ssid" P"password"       ; WiFi Settings
 ;M552 S1 P"ssid"                ; Enable WiFi Networking
+M550 P"ToolChanger"             ; Set machine name
 M552 S1                         ; Enable Networking
 M586 P0 S1                      ; Enable HTTP
 M586 P1 S0                      ; Disable FTP
@@ -79,7 +79,7 @@ M906 X1600 Y1600 Z1100 C400 E900:900:900:900 I30        ; Set motor currents (mA
 M84 S120                                                ; Set idle timeout
 
 ; Stall Detection
-M915   C S3 F1 H400 R0                    ; Coupler
+M915   C S4 F1 H400 R0                    ; Coupler
 M915 X Y S3 F0 H400 R0                    ; X / Y Axes
 
 ; Axis
@@ -89,6 +89,7 @@ M203 X15000 Y15000 Z1200 C5000 E5000:5000:5000:5000 ; Set maximum speeds (mm/min
 M201 X2500 Y2000 Z500 C500 E2500:2500:2500:2500     ; Set accelerations (mm/s^2)
 
 ; AAR
+;M593 P"zvd" F50 FW3.4+
 M593 F50                                                ; cancel ringing at 50Hz (https://forum.e3d-online.com/threads/accelerometer-and-resonance-measurements-of-the-motion-system.3445/)
 M376 H0                                                 ; bed compensation taper, Ausschleichhöhe
 
@@ -121,8 +122,8 @@ M950 H4 C"duex.e3heat" T4                                    ; Extruder 0 heater
 M143 H4 S300                                                 ; Set temperature limit for heater 4 to 300C
 M307 H4 A776.8 C166.9 D2.6 S1.00 V24.3 B0
 
-
 ; Tools
+;M568: Set Tool Settings Available in RepRapFirmware 3.3beta2 and later. The R and S parameters are alternatives to the temperature-setting functions of G10, which may be deprecated in the future.
 M563 P0 S"T0 0.3 285" D0 H1 F2          ; Define tool 0
 G10 P0 X0 Y0 Z0                         ; Reset tool 0 axis offsets
 G10 P0 R0 S0                            ; Reset initial tool 0 active and standby temperatures to 0C

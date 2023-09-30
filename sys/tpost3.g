@@ -18,3 +18,4 @@ if move.axes[0].homed && move.axes[1].homed && move.axes[2].homed
 
   ;G29 S1 ; Use the Z offset Mesh Map on the SD card
   G1 R2 Z10 F30000;
+  G1 R2 Z0 F30000;

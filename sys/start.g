@@ -5,7 +5,7 @@ M290 R0 Z0
 G10 P0 R205 S205
 G10 P1 R215 S215
 G10 P2 R205 S205
-G10 P3 R212 S212
+G10 P3 R220 S220
 
 ; select the extruders with no homing to preheat all at once.
 M18
@@ -37,6 +37,6 @@ M98 P"prime.g"
 
 T-1
 
-M290 R1 Z0.000
+M290 R1 Z-0.15
 
 G29 S1 P"heightmap.csv" ; Use the Z offset Mesh Map on the SD card

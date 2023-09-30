@@ -18,10 +18,15 @@
 ; Macro Coordinates: Lock position is C40, unlock position is C123
 
 M400
-G91                 ; Relative coordinates
-; M913 C80            ; Crash fallback: Set C motor to lower current, but <= 80 was unstable low.
-G1 H1 C10 F5000     ; Space min end or stall at max end, needed for acceleration towards near min end.
+G91                     ; Relative coordinates
+
+M915 C S30 F1 H400 R0   ; Coupler less sensible
+G1 H1 C10 F5000         ; Space min end or stall at max end, needed for acceleration towards near min end.
+; M913 C80              ; Crash fallback: Set C motor to lower current, but <= 80 was unstable low.
+
+M915   C S2 F1 H400 R2                    ; Coupler sensible
 G1 H1 C-1000 F5000  ; Try to stall at min end, reset to min-axis M203 = 0 coordinate
+M915   C S4 F1 H400 R0                    ; Coupler revert sensible
 M400
 G92 C0              ; Crash fallback: coordinates reset to 0 in case stall did not reset to min-axis M203 coordinate
 G90                 ; Back to absolute coordinates
