@@ -2,17 +2,22 @@
 Nibbels RRF3 configuration files for the Motion System &amp; ToolChanger.
 My firmware is: 
 ````
-Board: Duet 2 WiFi (2WiFi) 
-Firmware: RepRapFirmware for Duet 2 WiFi/Ethernet 3.1.1 (2020-05-19b2) 
-Duet WiFi Server Version: 1.23 
-Duet Web Control 3.1.1 
+Board: Duet 2 WiFi (2WiFi)
+Firmware: RepRapFirmware for Duet 2 WiFi/Ethernet 3.4.6 (2023-07-21)
+Duet WiFi Server Version: 1.27
 ````
 
 Copy onto the Micro SD Card and insert into the Duet2 before power on.
-
 You may need to check the config.g file to make changes for use on your own Network.
-I always use the Tool Changer post-processing script to print.
+
+This is a Tool Changer post-processing script to print:
 https://github.com/mkudzia84/toolchanger-pspp
+-> In newer prusa 2.5.0 / 2.6.1 the post processing script has some flaws. It does not work anymore.
+
+I am currently looking for ways
+-> to print without filament configuration in the slicer (see active and standby temperatures) I want the filament configuration in the toolchanger to deal with it. Then I can swap filaments without changing gcodes - hopefully.
+-> to have automatic z-leveling per tool head - The leveling of the exact z-offset is a pain i think.
+-> to have a simple way to disable unneeded tool heads per print.
 
 ###### Warning ######
 I did change the stepper ports on which the steppers are connected. -> See config.g in the upper part.
@@ -25,9 +30,5 @@ I did change the stepper ports on which the steppers are connected. -> See confi
 
 THIS REPO IS A CONSTANT DEVELOPMENT AND I CANNOT GUARANTEE THAT THE FILES WORK FOR YOU. USE THEM WISELY.
 
-
-https://duet3d.dozuki.com/c/RepRapFirmware
-
-https://duet3d.dozuki.com/Wiki/Gcode
-
-Make sure you have the lastest firmware installed | https://github.com/dc42/RepRapFirmware/releases   
+[https://duet3d.dozuki.com/Wiki/Gcode](https://docs.duet3d.com/User_manual/Reference/Gcodes)
+[https://github.com/dc42/RepRapFirmware/releases](https://github.com/Duet3D/RepRapFirmware/releases)
