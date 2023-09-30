@@ -1,6 +1,6 @@
 M221 S90               ; Flow(Diameter Compensation) 
                        ; Steps/mm for 285 is default
-M568 R180 S212         ; Set Nozzle Standby and Active Temperature
+;M568 R180 S212         ; Set Nozzle Standby and Active Temperature
 M207 S1.2 F2400 Z0.2   ; Hardware Retract length
 M220 S100              ; Set speed factor override percentage
 
