@@ -61,9 +61,11 @@ M574 X1 S3                                   ; Set X endstop stall detection
 M574 Y1 S3                                   ; Set Y endstop stall detection
 
 M574 Z0 P"nil"                               ; No Z endstop @used by DC42 using G30 homing
-M558 P8 C"zstop" H5 F120 T10000 A5 S0.01     ; Set Z probe type to switch, the axes for which it is used and the dive height + speeds @DC42
+M558 P8 C"zstop" H5 F120 T10000 A5 S0.01     ; Set Z probe 0 type to switch, the axes for which it is used and the dive height + speeds @DC42
 G31 Z0                                       ; Set Z probe trigger value, offset and trigger height
-M557 X4:292 Y4:185 S16:15                    ; Set Z probe: Define mesh grid
+M557 X4:292 Y4:185 S16:15                    ; Set Z probe 0: Define mesh grid
+
+M558 P8 C"!e1stop" H5 F120 A5 S0.01 B1 K1    ; Set Z probe 1: For nozzle leveling
 
 M574 C1 S3                                   ; Stall detect coupler at low end of its range
 
@@ -169,7 +171,9 @@ M572 D2 S0.04                   ; pressure advance T2 Hemera
 M572 D3 S0.04                   ; pressure advance T3 Hemera
 
 ; Tool offsets G1 X318.1 Y0
-G10 P0 X14.1‬0 Y59.75 Z-7.60     ; T0 TitanAero 3mm
-G10 P1 X13.54 Y59.42 Z-7.84     ; T1 TitanAero 3mm
-G10 P2 X18.75 Y44.16 Z-5.35     ; T2 Hemera 1.75mm
-G10 P3 X18.95 Y44.26 Z-10.4     ; T3 Hemera 1.75mm
+global offsetK0K1Probes = 1.8 ;[mm] Z=0 after homing is 1.8mm lower than the nozzle probe trigger point. This is a static z offset for all tools.
+
+G10 P0 X14.10 Y59.75 Z{global.offsetK0K1Probes-9.351}    ; T0 TitanAero 3mm
+G10 P1 X13.54 Y59.42 Z{global.offsetK0K1Probes-9.688}    ; T1 TitanAero 3mm
+G10 P2 X18.75 Y44.16 Z{global.offsetK0K1Probes-7.162}    ; T2 Hemera 1.75mm
+G10 P3 X18.95 Y44.26 Z{global.offsetK0K1Probes-7.726}    ; T3 Hemera 1.75mm

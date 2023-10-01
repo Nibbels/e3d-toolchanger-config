@@ -1,0 +1,32 @@
+; To use the macro you need two z probes.
+; Probe 0 (K0) is the original probe for Z-home. That is the microswitch at the tool head.
+; Probe 1 (K1) is a button that is pressed down by the nozzle. I did mount it at the print bed. And attached it to the port "e1 endstop".
+; The detailed logic, coordinate of the nozzle probe button and some safety rules are defined in deployprobe1.g and retractprobe1.g
+
+T-1
+
+G28
+
+T3 
+G30 S-1 K1
+T-1
+
+G28 Z
+T2
+G30 S-1 K1
+T-1
+
+G28 Z
+T1
+G30 S-1 K1
+T-1
+
+G28 Z
+T0
+G30 S-1 K1
+T-1
+
+; Goals:
+; - Tool offsets are adjusted on the fly.
+; - You adjust them manually in config.g at bottom of the file afterwards to keep the calibration after reboot.
+;
