@@ -1,7 +1,16 @@
-echo "T", state.currentTool, "move.axes[2]machinePosition -> -zOffset in config.g", move.axes[2].machinePosition
-echo "T", state.currentTool, "move.axes[2]userPosition -> Should be variable `offsetK0K1Probes` in config.g", move.axes[2].userPosition
+; Height over homed Z0 without tool offset:
+var zOffsetTool = -move.axes[2].machinePosition
+; Z distance from probe 0 toolhead trigger point on the print bed to probe 1 nozzle trigger point
+var zOffsetStatic = move.axes[2].userPosition
+
+echo "T", state.currentTool, "-move.axes[2]machinePosition -> zOffset for config.g:", var.zOffsetTool
+echo "T", state.currentTool, "move.axes[2]userPosition -> Should be the same for all tools:", var.zOffsetStatic
 
 G53 G1 Z15 F2500
+   
+; Auto adjust the z offset of the current tool
+; To save this value write machinePosition into config.g G10 Pn commands.
+G10 P{state.currentTool} Z{global.offsetK0K1Probes + var.zOffsetTool} 
 
 ; Explained in detail:
 ; 1) machinePosition is the trigger height relative to homed Z=0 without any tool offset.
